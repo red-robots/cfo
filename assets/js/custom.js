@@ -7,16 +7,16 @@
 
 jQuery(document).ready(function ($) {
 	
-	/*
-	*
-	*	Current Page Active
-	*
-	------------------------------------*/
-	$("[href]").each(function() {
-    if (this.href == window.location.href) {
-        $(this).addClass("active");
+	$(window).scroll(function(){
+        if ( $(this).scrollTop() > 100 ) {
+            $('.scrollup').fadeIn();
+            $('body').addClass('scrolled');
+        } else {
+            $('.scrollup').fadeOut();
+            $('body').removeClass('scrolled');
         }
-	});
+    }); 
+
 	/*
         FAQ dropdowns
 	__________________________________________
@@ -83,21 +83,21 @@ jQuery(document).ready(function ($) {
 	*	Smooth Scroll to Anchor
 	*
 	------------------------------------*/
-	 $('a').click(function(){
-	    $('html, body').animate({
-	        scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
-	    }, 500);
-	    return false;
-	});
+	//  $('a').click(function(){
+	//     $('html, body').animate({
+	//         scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
+	//     }, 500);
+	//     return false;
+	// });
 
 	/*
 	*
 	*	Nice Page Scroll
 	*
 	------------------------------------*/
-	$(function(){	
-		$("html").niceScroll();
-	});
+	// $(function(){	
+	// 	$("html").niceScroll();
+	// });
 	
 	
 	/*
@@ -113,5 +113,14 @@ jQuery(document).ready(function ($) {
 	*
 	------------------------------------*/
 	new WOW().init();
+
+	/* Mobile Menu */
+	$(document).on("click",".menu-toggle",function(e){
+		e.preventDefault();
+		$(this).toggleClass('open');
+		$('body').toggleClass('open-menu');
+	});
+
+
 
 });// END #####################################    END

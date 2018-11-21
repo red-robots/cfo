@@ -25,8 +25,9 @@
 </head>
 <?php
 $logo = get_custom_logo();
+$classes[] = ( is_front_page()  ) ? 'homepage':'subpage';
 ?>
-<body <?php body_class(); ?>>
+<body <?php body_class($classes); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'acstarter' ); ?></a>
 
@@ -41,11 +42,18 @@ $logo = get_custom_logo();
 				 <?php } ?>	
 			</div>
 
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span></span></button>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'MENU', 'acstarter' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			</nav><!-- #site-navigation -->
+			<nav id="site-mobile-navigation" class="main-navigation" role="navigation">
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'mobile-primary-menu' ) ); ?>
 			</nav><!-- #site-navigation -->
 	</div><!-- wrapper -->
 	</header><!-- #masthead -->
 
+	<?php get_template_part("template-parts/banner"); ?>
+
 	<div id="content" class="site-content wrapper">
+
+

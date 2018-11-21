@@ -102,3 +102,151 @@
       }
     }
 }
+.banner-wrap {
+	position: relative;
+}
+.banner-caption {
+	position: absolute;
+	top: 65%;
+	transform: translateY(-65%);
+	z-index: 10;
+	width: 90%;
+	right: 0;
+	text-align: right;
+	box-sizing: border-box;
+	padding-right: 20px;
+	@media screen and (min-width: $tabwidth) {
+		width: 70%;
+		top: 50%;
+		transform: translateY(-50%);
+		padding-right: 50px;
+		top: 65%;
+		transform: translateY(-65%);
+	}
+	@media screen and (min-width: $midwidth) {
+		width: 50%;
+		top: 60%;
+		transform: translateY(-60%);
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 40%;
+	}
+	p {
+		margin: 0 0;
+	}
+	.tagline1 {
+		color: #FFF;
+		font-weight: 500;
+		font-size: 20px;
+		width: 100%;
+		@media screen and (min-width: $tabwidth) {
+			font-size: 30px;
+		}
+	}
+	.tagline2 {
+		display: inline-block;
+		font-weight: 500;
+		font-size: 25px;
+		color: #928143;
+		line-height: 1;
+		hyphens: none;
+		position: relative;
+		border-bottom: 4px solid #98b2bf;
+		padding-bottom: 4%;
+		@media screen and (min-width: $tabwidth) {
+			font-size: 5vw;
+			padding-bottom: 8%;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 50px;
+		}
+	}
+}
+.banner-image {
+	width: 130%;
+	@media screen and (min-width: $tabwidth) {
+		width: 100%;
+	}
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.about-info {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	width: 100%;
+	margin: 0 auto;
+	hyphens: none;
+	@media screen and (min-width: $tabwidth) {
+		width: 80%;
+		padding-top: 80px;
+		padding-bottom: 70px;
+	}
+	.titlediv {
+		margin: 0 0;	
+		line-height: 1.2;
+		@media screen and (min-width: $tabwidth) {
+			width: 70%;
+			float: left;
+		}
+		p {
+			hyphens: none;
+		}
+	}
+	.title {
+		font-family: $font-BemboStd;
+		font-size: 30px;
+		color: $color-gold;
+		padding-bottom: 15px;
+		padding-right: 0;
+		border-bottom: 2px solid $color-dark-teal;
+		@media screen and (min-width: $tabwidth) {
+			padding-right: 50px;
+		}
+		p {
+			margin: 0 0;
+		}
+	}
+	.description {
+		padding-top: 20px;
+		line-height: 1.5;
+		padding-right: 0;
+		margin-bottom: 50px;
+		@media screen and (min-width: $tabwidth) {
+			padding-right: 50px;
+			margin-bottom: 0;
+		}
+		p {
+			margin-top: 0;
+			margin-bottom: 1em;
+		}
+	}
+	.photodiv {
+		width: 300px;
+		margin: 0 auto;
+		@media screen and (min-width: $tabwidth) {
+			width: 30%;
+			float: left;
+			margin: 0 0;
+		}
+		.image {
+			width: 280px;
+			height: 280px;
+			border-radius: 300px;
+			overflow: hidden;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			border:2px solid $color-dark-teal;
+			position: relative;
+			box-shadow: inset 0px 0px 0px 8px rgba(255,255,255,1);
+			left: -5px;
+			top: -5px;
+			img {
+				display: none;
+			}
+		}
+	}
+}
