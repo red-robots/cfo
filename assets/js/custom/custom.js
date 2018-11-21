@@ -121,6 +121,12 @@ jQuery(document).ready(function ($) {
 		$('body').toggleClass('open-menu');
 	});
 
+	$("a.homebox").hover( function(){
+		$(this).next().addClass('show fadeInUp');
+	},function(){
+		$(this).next().removeClass('show fadeInUp');
+	});
+
 
 
 });// END #####################################    END
