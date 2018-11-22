@@ -366,7 +366,7 @@
 	}
 
 	.desc {
-		display: none;
+		display: block;
 		border-top: 2px solid $color-dark-teal;
 		padding-top:25px;
 		margin-top: 25px;
@@ -390,9 +390,17 @@
 		visibility: visible;
 		animation-duration: .5s;
 		display: block;
-		padding-bottom: 30px;
+		padding-bottom: 0;
 		@media screen and (min-width: $tabwidth) {
 			padding-bottom: 0;
+		}
+	}
+	.desc.show.fadeInUp {
+		-webkit-animation-name: none;
+		animation-name: none;
+		@media screen and (min-width: $tabwidth) {
+			-webkit-animation-name: fadeInUp;
+			animation-name: fadeInUp;
 		}
 	}
 }
