@@ -12,6 +12,7 @@
 	}
 	@media screen and (min-width: $deskwidth) {
 		text-align: left;
+		right: -20px;
 	}
 	ul {
 		list-style: none;
@@ -49,11 +50,12 @@
 		}
 	}
 	.menu > li > a {
-		padding:10px 0;
+		padding:15px 0;
 		position: relative;
 		@media screen and (min-width: $tabwidth) {
 			margin-bottom: 5px;
 			font-size: 13px;
+			padding:10px 0;
 		}
 		@media screen and (min-width: $midwidth) {
 			font-size: 15px;

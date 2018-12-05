@@ -1,8 +1,10 @@
 </div><!-- #content -->
 	<footer id="colophon" class="site-footer" role="contentinfo">
+		<?php //wp_nav_menu( array( 'menu' => 'Footer Menu', 'menu_id' => 'footer-menu' ) ); ?>
 
 		<div class="wrapper">
 			<div class="mid-wrapper clear">
+				<div class="footbg"></div>
 				<div class="footer-widgets first clear">
 					<div class="foot-widget">
 						<h3 class="title">About <span><i class="fas fa-chevron-right"></i></span></h3>

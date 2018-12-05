@@ -42,6 +42,10 @@ $classes[] = ( is_front_page()  ) ? 'homepage':'subpage';
 				 <?php } ?>	
 			</div>
 
+			<div class="clientLogin">
+				<a href="#">Client Login</a>
+			</div>
+
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span></span></button>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>

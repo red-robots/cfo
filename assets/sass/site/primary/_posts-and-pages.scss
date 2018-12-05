@@ -119,7 +119,7 @@
 		width: 70%;
 		top: 50%;
 		transform: translateY(-50%);
-		padding-right: 50px;
+		padding-right: 30px;
 		top: 65%;
 		transform: translateY(-65%);
 	}
@@ -408,10 +408,36 @@
 	padding-bottom: 50px;
 }
 .site-footer {
-	background: $color-gold;
+	background-color: #878180;
 	color: #FFF;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	overflow: hidden;
+	.footer-widgets {
+		position: relative;
+		z-index: 5;
+	}
+	.mid-wrapper {
+		position:relative;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.footbg {
+		position: absolute;
+		top: -25px;
+    	left: -60%;
+		width: 100%;
+		height: 100%;
+		background-image:url('images/footer_bg.png');
+		background-repeat: no-repeat;
+		background-position: top center;
+		background-size: contain;
+		@media screen and (min-width: $tabwidth) {
+			width: 460px;
+			left: -12%;
+			top: 0;
+			background-position: 8% -30px;
+			background-size: cover;
+		}
+	}
 }
 
 .footer-widgets {
@@ -455,4 +481,25 @@
 .subpage #primary{
 	padding-top: 30px;
     padding-bottom: 40px;
+}
+.clientLogin {
+	display: inline-block;
+	position: absolute;
+	top: 30px;
+	right: 82px;
+	@media screen and (min-width: $tabwidth) {
+		top: 24px;
+		right: 30px;
+	}
+	a {
+		text-transform: uppercase;
+		color: $color-gold;
+		cursor: pointer;
+		font-size: 14px;
+		text-decoration: none;
+		transition: all ease-out .3s;
+		&:hover {
+			color: #d2b851;
+		}
+	}
 }
