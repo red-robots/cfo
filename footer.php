@@ -1,47 +1,16 @@
 </div><!-- #content -->
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<?php //wp_nav_menu( array( 'menu' => 'Footer Menu', 'menu_id' => 'footer-menu' ) ); ?>
+		
 
 		<div class="wrapper">
 			<div class="mid-wrapper clear">
 				<div class="footbg"></div>
-				<div class="footer-widgets first clear">
-					<div class="foot-widget">
-						<h3 class="title">About <span><i class="fas fa-chevron-right"></i></span></h3>
-						<div class="text">
-							<p>Lorem ipsum viverra nisl sapien est in justo ullamcorper et, odio commodo porttitor iaculis feugiat malesuada gravida dapibus.</p>
-						</div>
-					</div>
-
-					<div class="foot-widget">
-						<h3 class="title">Team <span><i class="fas fa-chevron-right"></i></span></h3>
-						<div class="text">
-							<p>Lorem ipsum viverra nisl sapien est in justo ullamcorper et, odio commodo porttitor iaculis feugiat malesuada gravida dapibus.</p>
-						</div>
-					</div>
-
-					<div class="foot-widget">
-						<h3 class="title">Services <span><i class="fas fa-chevron-right"></i></span></h3>
-						<div class="text">
-							<p>Lorem ipsum viverra nisl sapien est in justo ullamcorper et, odio commodo porttitor iaculis feugiat malesuada gravida dapibus.</p>
-						</div>
-					</div>
-
-					<div class="foot-widget">
-						<h3 class="title">Contact <span><i class="fas fa-chevron-right"></i></span></h3>
-						<div class="text">
-							<p>Lorem ipsum viverra nisl sapien est in justo ullamcorper et, odio commodo porttitor iaculis feugiat malesuada gravida dapibus.</p>
-						</div>
-					</div>
-
-					<div class="foot-widget">
-						<h3 class="title">News &amp; Insights <span><i class="fas fa-chevron-right"></i></span></h3>
-						<div class="text">
-							<p>Lorem ipsum viverra nisl sapien est in justo ullamcorper et, odio commodo porttitor iaculis feugiat malesuada gravida dapibus.</p>
-						</div>
-					</div>
+				<div class="footer-menu-wrap clear">
+				<?php 
+					//$menus = wp_get_nav_menu_items( 'Footer Menu' );
+					wp_nav_menu( array( 'menu' => 'Footer Menu', 'menu_id' => 'footer-menu','link_before'=>'<span>','after_before'=>'<span>' ) ); 
+				?>
 				</div>
-
 			</div><!-- wrapper -->
 		</div>
 

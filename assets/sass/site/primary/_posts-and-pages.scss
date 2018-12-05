@@ -476,6 +476,10 @@
 			position: absolute;
 			right: 0;
 		}
+		a {
+			color: #FFF;
+			text-decoration: none;
+		}
 	}
 }
 .subpage #primary{
@@ -503,3 +507,93 @@
 		}
 	}
 }
+.footer-menu-wrap {
+	position: relative;
+	z-index: 10;
+	margin-right: -20px;
+	margin-left: -20px;
+	ul {
+		margin: 0 0;
+		padding: 0 0;
+		list-style: none;
+		a {
+			display: inline-block;
+			color: #FFF;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 16px;
+			padding-top: 3px;
+			padding-bottom: 3px;
+			transition: all ease-out .2s;
+			span {
+				display: inline-block;
+				cursor: pointer;
+				transition: all ease-out .2s;
+			}
+			&:hover span {
+				opacity: 0.5;
+			}
+		}
+	}
+	.menu {
+		@media screen and (min-width: $tabwidth) {
+			display: flex;
+			justify-content: space-between;
+			align-content: center;
+			align-items: top;
+		}
+	}
+	.menu > li {
+		display: block;
+		width: 100%;
+		box-sizing: border-box;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-top: 18px;
+		@media screen and (min-width: $tabwidth) {
+			margin-top: 0;
+		}
+	}
+	.menu > li:first-child {
+		margin-top: 0;
+	}
+	.menu > li > a {
+		display: block;
+		position: relative;
+		border-bottom: 2px solid #FFF;
+		padding-bottom: 15px;
+		margin-bottom: 15px;
+		@media screen and (min-width: $tabwidth) {
+			padding-bottom: 10px;
+		}
+		&:after {
+			content: "\f054";
+			display: inline-block;
+			font: normal normal normal 14px/1 FontAwesome;
+			font-size: inherit;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			position: absolute;
+			right: 0;
+			transition: all ease-out .3s;
+			margin-right: 0;
+		}
+	}
+	.menu > li:hover > a {
+		&:after {
+			margin-right: -5px;
+		}
+	}
+	.menu ul li {
+		margin-bottom: 2px;
+	}
+	.menu ul a {
+		font-size: 14px;
+		&:hover {
+			opacity: 0.5;		
+		}
+	}
+}
+
+
