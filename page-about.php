@@ -107,11 +107,11 @@ if($banner) { ?>
 	<div class="section4-title clear">
 		<div class="mid-wrapper clear"><h2 class="title"><?php echo $title4;?></h2></div>
 	</div>
-	<div class="section4-content mid-wrapper clear text-justify">
+	<div class="section4-content mid-wrapper clear">
 		<div class="mid-content-wrap clear">
-			<?php echo $content4?>
+			<div class="text-content text-justify"><?php echo $content4?></div>
 			<?php if($button_label4 && $button_link4) { ?>
-			<div class="button text-center">
+			<div class="button">
 				<a class="btn xs" href="<?php echo $button_link4?>"><?php echo $button_label4?></a>
 			</div>
 			<?php } ?>
