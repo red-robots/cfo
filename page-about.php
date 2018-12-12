@@ -111,7 +111,7 @@ if($banner) { ?>
 		<div class="mid-content-wrap clear">
 			<?php echo $content4?>
 			<?php if($button_label4 && $button_link4) { ?>
-			<div class="button">
+			<div class="button text-center">
 				<a class="btn xs" href="<?php echo $button_link4?>"><?php echo $button_label4?></a>
 			</div>
 			<?php } ?>

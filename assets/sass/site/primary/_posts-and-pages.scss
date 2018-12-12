@@ -565,12 +565,19 @@
 	margin-top: 0;
 	margin-bottom: 70px;
 	.textwrap {
-		margin-top: 50px;
+		margin-top: 40px;
 		border-bottom: 2px solid $color-gold;
-		padding-bottom: 20px;
+		padding-bottom: 30px;
 		@media screen and (min-width: $tabwidth) {
+			margin-top: 60px;
 			border-bottom: 0;
 			padding-bottom: 0;
+			&:first-child {
+				margin-top: 40px;
+			}
+		}
+		&:last-child {
+			border-bottom: none;
 		}
 	}
 	.title,.text, .text .pad {
@@ -588,6 +595,7 @@
 		position: relative;
 	}
 	.title {
+		text-align: center;
 		@media screen and (min-width: $tabwidth) {
 			width: 45%;
 			float: left;
@@ -630,6 +638,12 @@
 				display: block;
 				width: 100%;
 			}
+		}
+	}
+	.button {
+		text-align: center;
+		@media screen and (min-width: $tabwidth) {
+			text-align: left;
 		}
 	}
 }
@@ -719,11 +733,16 @@
 		padding: 0 0;
 		list-style: none;
 		a {
+			font-family: $font-SofiaPro;
+			font:{
+				size: 16px;
+				weight: 600;
+			};
 			display: inline-block;
 			color: #FFF;
 			text-decoration: none;
 			text-transform: uppercase;
-			font-size: 16px;
+			
 			padding-top: 3px;
 			padding-bottom: 3px;
 			transition: all ease-out .2s;

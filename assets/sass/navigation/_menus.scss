@@ -52,10 +52,12 @@
 	.menu > li > a {
 		padding:15px 0;
 		position: relative;
+		letter-spacing: 1px;
 		@media screen and (min-width: $tabwidth) {
 			margin-bottom: 5px;
 			font-size: 13px;
 			padding:10px 0;
+			font-weight: 500;
 		}
 		@media screen and (min-width: $midwidth) {
 			font-size: 15px;
@@ -70,7 +72,7 @@
 			height: 2px;
 			background: #98b2bf;
 			position: absolute;
-			margin: 2px auto 0;
+			margin: 5px auto 0;
 			transform: scaleX(0);
 			visibility: hidden;
 			transition: all ease-out 0.3s;
@@ -152,7 +154,7 @@
 			background: $color-gold;
 		}
 		.menu ul {
-			background: $color-theme;
+			background: $color-dark-teal;
 		}
 	}
 }
@@ -203,6 +205,9 @@ button.menu-toggle {
 			top: 10px;
 		}
 	}
+	&:hover {
+		background: transparent;
+	}
 }
 button.menu-toggle.open {
 	span {
@@ -214,6 +219,21 @@ button.menu-toggle.open {
 			transform: translateY(-10px) rotate(-45deg);
 		}
 	}
+}
+.subpage {
+	button.menu-toggle span, 
+	button.menu-toggle span:before, 
+	button.menu-toggle span:after {
+		background: $color-theme;
+	}
+	button.menu-toggle.open {
+		span {
+			background: transparent;
+		}
+	}
+}
+.scrolled #masthead {
+	box-shadow: 0px 2px 13px 0px rgba(0,0,0,0.24);
 }
 #site-mobile-navigation {
 	display: block;
@@ -246,6 +266,7 @@ button.menu-toggle.open {
 	}
 	.menu a {
 		display: inline-block;
+		font-weight: 500;
 	}
 	.menu > li > a {
 		font-size: 20px;
