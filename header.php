@@ -26,6 +26,8 @@
 <?php
 $logo = get_custom_logo();
 $classes[] = ( is_front_page()  ) ? 'homepage':'subpage';
+$client_login_title = get_field('client_login_title','options');
+$client_login_link = get_field('client_login_link','options');
 ?>
 <body <?php body_class($classes); ?>>
 <div id="page" class="site">
@@ -46,9 +48,11 @@ $classes[] = ( is_front_page()  ) ? 'homepage':'subpage';
 				 <?php } ?>	
 			</div>
 
+			<?php if($client_login_title && $client_login_link) { ?>
 			<div class="clientLogin">
-				<a href="#">Client Login</a>
+				<a href="<?php echo $client_login_link;?>"><?php echo $client_login_title;?></a>
 			</div>
+			<?php } ?>	
 
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span></span></button>
 			<nav id="site-navigation" class="main-navigation" role="navigation">

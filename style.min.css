@@ -1984,12 +1984,18 @@ body.scrolled.home #masthead{background:#143448;box-shadow:0 2px 12px 0 rgba(0,0
 @media screen and (min-width:780px){.about-texts .row-title{text-align:right}
 }.about-texts .row-title span{color:#3b505a}
 @media screen and (min-width:780px){.about-texts .row-title span{display:block;width:100%}
-}.section4-title{background:url("images/text-bg.png");background-color:#1a273a;background-position:center center;background-repeat:no-repeat}
+}.section4-title{background:url("images/text-bg.png");background-color:#1a273a;background-position:center center;background-repeat:no-repeat;background-size:cover}
 .section4-title .mid-wrapper{margin:0 auto;padding-top:40px;padding-bottom:20px}
 .section4-title h2.title{color:#FFF;margin:0;font-family:"BemboStd","Georgia",serif;font-size:30px;font-weight:normal;text-transform:uppercase;text-align:center;letter-spacing:2px}
 @media screen and (min-width:780px){.section4-title h2.title{font-size:40px}
 }.section4-content{padding-top:50px;padding-bottom:40px}
 .button .btn.xs{padding:5px 10px 3px;font-size:13px;letter-spacing:1px}
+.bottom-info{background:url("images/services_bg.png");background-color:#1a273a;background-size:cover;background-position:center center;background-repeat:no-repeat;color:#FFF;text-align:center;margin-bottom:25px}
+.bottom-info .title1{margin:0;font-family:"BemboStd","Georgia",serif;font-size:40px;font-weight:normal;letter-spacing:2px;line-height:1.2}
+.bottom-info .title2{margin:0 0 25px;font-size:18px}
+.bottom-info .pad{padding:32px 30px 35px}
+.bottom-info .btn{display:inline-block;text-transform:uppercase;border:1px solid #FFF;padding:2px 12px 1px;text-decoration:none;color:#FFF;background:transparent;font-weight:400;-webkit-transform:.3s ease-in;-ms-transform:.3s ease-in;transform:.3s ease-in}
+.bottom-info .btn:hover{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2);background:transparent}
 .footer-menu-wrap{position:relative;z-index:10;margin-right:-20px;margin-left:-20px}
 .footer-menu-wrap ul{margin:0;padding:0;list-style:none}
 .footer-menu-wrap ul a{display:inline-block;color:#FFF;text-decoration:none;text-transform:uppercase;font-size:16px;padding-top:3px;padding-bottom:3px;-webkit-transition:all ease-out .2s;transition:all ease-out .2s}

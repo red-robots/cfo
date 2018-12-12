@@ -55,20 +55,27 @@ if($banner) { ?>
 			<div class="about-texts clear">
 			<?php foreach($items as $row) { 
 				$content = $row['content'];
-				$str = $row['title'];
-				$arr = explode(' ',trim($str));
-				$row_title = '';
 				$button_label = $row['button_label'];
 				$button_link = $row['button_link'];
-
-				$i=1; foreach($arr as $a) {
-					if($i==1) {
-						$row_title .= '<span>'.$a.'</span> ';
+				$str = $row['title'];
+				$parts = explode(' ',trim($str));
+				$count_str = count($parts);
+				$offset = ceil($count_str/2);
+				$row_title = '<span>';
+				$i=1; foreach($parts as $a) {
+					$comma = ($i>1) ? ' ' : '';
+					if($i<=$offset) {
+						$row_title .= $comma . $a;
+						if($i==$offset) {
+							$row_title .= '</span>';
+						}
 					} else {
-						$row_title .= $a;
+						$row_title .= $comma . $a;
 					}
 					$i++;
 				}
+				$row_title = trim($row_title);
+				$row_title = preg_replace('/\s+/', ' ', $row_title);
 				?>
 				<div class="textwrap clear">
 					<div class="title">

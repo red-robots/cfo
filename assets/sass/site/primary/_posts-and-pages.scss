@@ -638,6 +638,7 @@
 	background-color: #1a273a;
 	background-position: center center;
 	background-repeat: no-repeat;
+	background-size: cover;
 	.mid-wrapper {
 		margin: 0 auto;
 		padding-top: 40px;
@@ -666,6 +667,46 @@
 		padding: 5px 10px 3px;
 		font-size: 13px;
 		letter-spacing: 1px;
+	}
+}
+.bottom-info {
+	background: url('images/services_bg.png');
+	background-color: #1a273a;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	color: #FFF;
+	text-align: center;
+	margin-bottom: 25px;
+	.title1 {
+		margin: 0 0;
+		font-family: $font-BemboStd;
+		font-size: 40px;
+		font-weight: normal;
+    	letter-spacing: 2px;
+    	line-height: 1.2;
+	}
+	.title2 {
+		margin: 0 0 25px;
+		font-size: 18px;
+	}
+	.pad {
+		padding:32px 30px 35px;
+	}
+	.btn {
+		display: inline-block;
+		text-transform: uppercase;
+		border:1px solid #FFF;
+		padding:2px 12px 1px;
+		text-decoration: none;
+		color: #FFF;
+		background: transparent;
+		font-weight: 400;
+		@include transform( 0.3s ease-in );
+		&:hover {
+			@include transform( scale(1.2) );
+			background: transparent;
+		}
 	}
 }
 .footer-menu-wrap {
