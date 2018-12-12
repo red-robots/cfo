@@ -1833,7 +1833,8 @@ div{overflow-wrap:break-word;word-wrap:break-word;-ms-word-break:break-all;word-
 html{margin:0}
 body{font-family:"ProximaNova",sans-serif;font-weight:400;color:#3b505a;font-size:16px;line-height:1.5;position:relative;background:#FFF}
 #page{position:relative;overflow:hidden}
-.mid-content-wrap,h1,h2,h3,h4,h5,h6,p,li,a,span,strong{overflow-wrap:normal;word-wrap:normal;-ms-word-break:normal;word-break:normal;word-break:normal;-ms-hyphens:none;-moz-hyphens:none;-webkit-hyphens:none;hyphens:none;page-break-inside:avoid}
+.mid-content-wrap,h1,h2,h3,h4,h5,h6{font-weight:600}
+h1,h2,h3,h4,h5,h6,p,li,a,span,strong{overflow-wrap:normal;word-wrap:normal;-ms-word-break:normal;word-break:normal;word-break:normal;-ms-hyphens:none;-moz-hyphens:none;-webkit-hyphens:none;hyphens:none;page-break-inside:avoid}
 .wrapper,.clear{clear:both}
 .wrapper:before,.wrapper:after,.clear:before,.clear:after{content:" ";display:table}
 .wrapper:after,.clear:after{clear:both}
