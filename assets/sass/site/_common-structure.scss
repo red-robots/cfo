@@ -22,15 +22,28 @@ html {
 body {
 	font-family: $font-ProximaNova;
 	font-weight: 400;
-	color: #3b505a;
-	font-size: 15px;
-	line-height: 1.4;
+	color: $color-theme;
+	font-size: 16px;
+	line-height: 1.5;
 	position: relative;
 	background: #FFF;
 }
 #page {
 	position: relative;
 	overflow: hidden;
+}
+.mid-content-wrap,
+h1,h2,h3,h4,h5,h6,p,li,a,span,strong {
+	overflow-wrap: normal;
+	word-wrap: normal;
+	-ms-word-break: normal;
+	word-break: normal;
+	word-break: normal;
+	-ms-hyphens: none;
+	-moz-hyphens: none;
+	-webkit-hyphens: none;
+	hyphens: none;
+	page-break-inside: avoid;
 }
 .wrapper, .clear {clear: both;}
 .wrapper:before, .wrapper:after, .clear:before,.clear:after {content: " "; display: table; }
@@ -52,7 +65,14 @@ body {
 		padding: 0 0;
 	}
 }
-
+.text-center{text-align: center;}
+.text-right{text-align: right;}
+.text-left{text-align: left;}
+.text-justify{text-align: justify;}
+.full-wrapper {
+	padding-left: 30px;
+	padding-right: 30px;
+}
 .content-area {
 	width: 100%;
 	margin: 0px auto;
@@ -153,7 +173,7 @@ body {
 	}
 }
 .subpage #masthead {
-	background: $color-dark-green;
+	background: #FFF;
 }
 body.home {
 	#masthead {
@@ -180,5 +200,27 @@ body.admin-bar {
 			top: 0;
 		}
 	}
+}
+
+.btn,input[type="submit"],button {
+	display: inline-block;
+	text-decoration: none;
+	-webkit-appearance: none;
+	border-radius: 0;
+	background-color: $color-theme;
+	color: #FFF;
+	font-weight: 500;
+	font-size: 18px;
+	padding:10px 20px;
+	text-transform: uppercase;
+	@include transition(all ease-out .3s);
+	&:hover {
+		color: #FFF;
+		background-color: $color-dark-teal;
+	}
+}
+
+.large-text {
+	font-size:20px;
 }
 

@@ -12,24 +12,36 @@
  * @package ACStarter
  */
 
-get_header(); ?>
+get_header(); 
+$banner = '';
+if( !is_front_page() ) { 
+	$banner = get_field('banner_image');
+	if($banner) { ?>
+	<div class="subpage-banner">
+		<img class="banner-image" src="<?php echo $banner['url']?>" alt="" />
+		<div class="titlediv">
+			<h1 class="page-title full-wrapper"><span><?php echo get_the_title();?></span></h1>
+		</div>
+	</div>
+	<?php } ?>
+<?php } ?>
 
 	<div id="primary" class="full-content-area clear">
 		<main id="main" class="site-main mid-wrapper clear" role="main">
-
-			<?php
-			while ( have_posts() ) : the_post();
-
-				get_template_part( 'template-parts/content', 'page' );
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
-			endwhile; // End of the loop.
-			?>
-
+			<?php while ( have_posts() ) : the_post();
+				if($banner) { ?>
+					<div class="entry-content">
+						<?php the_content();?>
+					</div>
+				<?php } else { ?>
+					<header class="entry-header">
+						<h1 class="entry-title"><?php the_title();?></h1>
+					</header>
+					<div class="entry-content">
+						<?php the_content();?>
+					</div>
+				<?php } ?>
+			<?php endwhile; ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

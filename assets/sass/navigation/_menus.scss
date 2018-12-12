@@ -110,6 +110,9 @@
 			max-height: 0;
 			overflow: hidden;
 		}
+		a {
+			font-weight: 500;
+		}
 		li {
 			display: block;
 			width: 100%;
@@ -138,6 +141,19 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+	}
+}
+.subpage .main-navigation {
+	@media screen and (min-width: $tabwidth) {
+		.menu > li > a {
+			color: $color-theme;
+		}
+		.menu > li > a:after {
+			background: $color-gold;
+		}
+		.menu ul {
+			background: $color-theme;
+		}
 	}
 }
 

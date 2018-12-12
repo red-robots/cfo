@@ -176,8 +176,14 @@
 	max-width: 100%;
 	width: 100%;
 	margin: 0 auto;
+	padding-left: 30px;
+	padding-right: 30px;
 	@media screen and (min-width: $tabwidth) {
 		max-width: 1000px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 .about-info {
@@ -507,6 +513,149 @@
 		}
 	}
 }
+.subpage-banner {
+	position: relative;
+	.titlediv {
+		width: 100%;
+		position: absolute;
+		bottom: 20px;
+		left: 0;
+		z-index: 5;
+		@media screen and (min-width: $tabwidth) {
+			bottom: 50px;
+		}
+		h1 {
+			margin: 0 0;
+			text-align: right;
+			color: #FFF;
+			font-size: 50px;
+    		font-weight: 500;
+    		line-height: 1;
+    		@media screen and (min-width: $tabwidth) {
+    			font-size: 60px;
+    		}
+    		span {
+    			display: inline-block;
+    			position: relative;
+    			border-bottom: 2px solid $color-gold;
+    		}
+		}
+	}
+}
+.mid-content-wrap {
+	width: 100%;
+	margin: 0 auto;
+	@media screen and (min-width: $tabwidth) {
+		width: 70%;
+	}
+}
+.about-texts {
+	margin-top: 0;
+	margin-bottom: 70px;
+	.textwrap {
+		margin-top: 50px;
+		border-bottom: 2px solid $color-gold;
+		padding-bottom: 20px;
+		@media screen and (min-width: $tabwidth) {
+			border-bottom: 0;
+			padding-bottom: 0;
+		}
+	}
+	.title,.text, .text .pad {
+		overflow-wrap: normal;
+		word-wrap: normal;
+		-ms-word-break: normal;
+		word-break: normal;
+		word-break: normal;
+		-ms-hyphens: none;
+		-moz-hyphens: none;
+		-webkit-hyphens: none;
+		hyphens: none;
+		page-break-inside: avoid;
+		box-sizing: border-box;
+		position: relative;
+	}
+	.title {
+		@media screen and (min-width: $tabwidth) {
+			width: 45%;
+			float: left;
+			text-align: right;
+			border-bottom: 2px solid $color-gold;
+		}
+	}
+	.text {
+		@media screen and (min-width: $tabwidth) {
+			width: 52%;
+			float: right;
+			top: -6px;
+		}
+		.pad {
+			font-size: 15px;
+			@media screen and (min-width: $midwidth) {
+				padding-right: 28%;
+			}
+		}
+		p {
+			margin-top: 0;
+			margin-bottom: 1em;
+		}
+	}
+	.row-title {
+		display: inline-block;
+		margin: 0 0 8px 0;
+		text-transform: uppercase;
+		font-family: $font-BemboStd;
+		font-size: 35px;
+		font-weight: 400;
+		line-height: 1;
+		color: $color-dark-teal;
+		@media screen and (min-width: $tabwidth) {
+			text-align: right;
+		}
+		span {
+			color: $color-theme;
+			@media screen and (min-width: $tabwidth) {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+}
+.section4-title {
+	background: url('images/text-bg.png');
+	background-color: #1a273a;
+	background-position: center center;
+	background-repeat: no-repeat;
+	.mid-wrapper {
+		margin: 0 auto;
+		padding-top: 40px;
+		padding-bottom: 20px;
+	}
+	h2.title {
+		color: #FFF;
+		margin: 0 0;
+		font-family: $font-BemboStd;
+		font-size: 30px;
+		font-weight: normal;
+		text-transform: uppercase;
+		text-align: center;
+		letter-spacing: 2px;
+		@media screen and (min-width: $tabwidth) {
+			font-size: 40px;
+		}
+	}
+}
+.section4-content {
+	padding-top: 50px;
+	padding-bottom: 40px;
+}
+.button {
+	.btn.xs {
+		padding: 5px 10px 3px;
+		font-size: 13px;
+		letter-spacing: 1px;
+	}
+}
 .footer-menu-wrap {
 	position: relative;
 	z-index: 10;
@@ -595,5 +744,4 @@
 		}
 	}
 }
-
 

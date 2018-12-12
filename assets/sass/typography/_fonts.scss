@@ -24,6 +24,26 @@
   font-weight: 700;
 }
 @font-face {
+  font-family: 'Proxima Sans';
+  src: url('fonts/proxima-sans-medium.eot');
+  src:  local('Proxima Sans Medium'),
+      url('fonts/proxima-sans-medium.woff') format('woff'), 
+      url('fonts/proxima-sans-medium.ttf') format('truetype'), 
+      url('fonts/proxima-sans-medium.svg') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Sans';
+  src: url('fonts/proximasansblack-webfont.eot');
+  src:  local('ProximaSansBlack'),
+      url('fonts/proximasansblack-webfont.woff') format('woff'), 
+      url('fonts/proximasansblack-webfont.ttf') format('truetype'), 
+      url('fonts/proximasansblack-webfont.svg') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
   font-family: SofiaPro;
   src: url(fonts/SofiaProLight.otf);
   font-weight: 300;

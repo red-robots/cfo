@@ -36,7 +36,11 @@ $classes[] = ( is_front_page()  ) ? 'homepage':'subpage';
 			
 			<div class="logo">
 				<?php if($logo) { ?>
-					<?php echo $logo; ?>
+					<?php if(is_front_page() ) { ?>
+						<?php echo $logo; ?>
+					<?php } else { ?>
+						<a href="<?php bloginfo('url'); ?>"><img src="<?php echo get_bloginfo('template_url')?>/images/logo-subpage.png" alt="<?php bloginfo('name'); ?>" itemprop="logo"/></a>
+					<?php } ?>
 				<?php } else { ?>
 					<h2 class="logo-name"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h2>
 				 <?php } ?>	
@@ -58,6 +62,6 @@ $classes[] = ( is_front_page()  ) ? 'homepage':'subpage';
 
 	<?php get_template_part("template-parts/banner"); ?>
 
-	<div id="content" class="site-content wrapper">
+	<div id="content" class="site-content">
 
 
