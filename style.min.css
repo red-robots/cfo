@@ -2002,7 +2002,10 @@ body.scrolled.home #masthead{background:#143448;box-shadow:0 2px 12px 0 rgba(0,0
 .mid-content-wrap{width:100%;margin:0 auto}
 @media screen and (min-width:600px){.mid-content-wrap{width:70%}
 }@media screen and (min-width:600px){.mid-content-wrap.width50{width:50%}
-}.about-texts{margin-top:0;margin-bottom:70px}
+}.mid-content-wrap .entry-content ul,.mid-content-wrap .entry-content ol{text-align:left;display:inline-block;margin-left:0;padding-left:0}
+.mid-content-wrap .entry-content ul li,.mid-content-wrap .entry-content ol li{margin-bottom:10px}
+.mid-content-wrap .entry-content ul ul,.mid-content-wrap .entry-content ul ol,.mid-content-wrap .entry-content ol ul,.mid-content-wrap .entry-content ol ol{margin-left:25px}
+.about-texts{margin-top:0;margin-bottom:70px}
 .about-texts .textwrap{margin-top:40px;border-bottom:2px solid #928243;padding-bottom:30px}
 @media screen and (min-width:600px){.about-texts .textwrap{margin-top:60px;border-bottom:0;padding-bottom:0}
 .about-texts .textwrap:first-child{margin-top:40px}

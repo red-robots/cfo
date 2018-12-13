@@ -567,6 +567,19 @@
 			width: 50%;
 		}
 	}
+	.entry-content ul,
+	.entry-content ol {
+		text-align: left;
+		display: inline-block;
+		margin-left: 0;
+		padding-left: 0;
+		li {
+			margin-bottom: 10px;
+		}
+		ul,ol {
+			margin-left: 25px;
+		}
+	}
 }
 .about-texts {
 	margin-top: 0;

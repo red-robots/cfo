@@ -29,18 +29,20 @@ if( !is_front_page() ) {
 	<div id="primary" class="full-content-area clear">
 		<main id="main" class="site-main mid-wrapper clear" role="main">
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php if($banner) { ?>
-					<div class="entry-content">
-						<?php the_content();?>
-					</div>
-				<?php } else { ?>
-					<header class="entry-header">
-						<h1 class="entry-title"><?php the_title();?></h1>
-					</header>
-					<div class="entry-content">
-						<?php the_content();?>
-					</div>
-				<?php } ?>
+				<div class="mid-content-wrap clear text-center large-text">
+					<?php if($banner) { ?>
+						<div class="entry-content">
+							<?php the_content();?>
+						</div>
+					<?php } else { ?>
+						<header class="entry-header">
+							<h1 class="entry-title"><?php the_title();?></h1>
+						</header>
+						<div class="entry-content">
+							<?php the_content();?>
+						</div>
+					<?php } ?>
+				</div>
 			<?php endwhile; ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
