@@ -138,14 +138,14 @@ jQuery(document).ready(function ($) {
 				post_id : post_id
 			},
 			beforeSend:function(){
-				//$(".ml-loader-wrap").show();
+				$(".ml-loader-wrap").show();
 			},
 			success : function( response ) {
 				if(response.content) {
 					var content = response.content;
 					$('body').append(content);
 					$('body').addClass('modal-open');
-					//$(".ml-loader-wrap").hide();
+					$(".ml-loader-wrap").hide();
 				} 
 			}
 		});
