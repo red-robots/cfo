@@ -9,6 +9,14 @@
 		clear: none;
 		width: auto;
 		width: 80%;
+		top: 16px;
+		right: -10px;
+		padding-left: 30px;
+	}
+	@media screen and (min-width: $midwidth) {
+		top: 0;
+		right: 0;
+		padding-left: 0;
 	}
 	@media screen and (min-width: $deskwidth) {
 		text-align: left;
@@ -26,8 +34,11 @@
 			display: inline-block;
 			float: right;
 			width: auto;
+			text-align: right;
 		}
-	
+		@media screen and (min-width: $midwidth) {
+			text-align: center;
+		}
 
 	}
 
@@ -44,8 +55,10 @@
 		display: inline-block;
 		@media screen and (min-width: $tabwidth) {
 			padding:0 10px;
+			float: none;
 		}
 		@media screen and (min-width: $midwidth) {
+			float: left;
 			padding:0 20px;
 		}
 	}
@@ -54,12 +67,13 @@
 		position: relative;
 		letter-spacing: 1px;
 		@media screen and (min-width: $tabwidth) {
-			margin-bottom: 5px;
+			margin-bottom: 2px;
 			font-size: 13px;
-			padding:10px 0;
-			font-weight: 500;
+			padding:10px 0 10px;
+			font-weight: 400;
 		}
 		@media screen and (min-width: $midwidth) {
+			margin-bottom: 5px;
 			font-size: 15px;
 		}
 		@media screen and (min-width: $deskwidth) {
@@ -91,7 +105,7 @@
 		display: block;
 		text-decoration: none;
 		font-family: $font-ProximaNova;
-		font-weight: 600;
+		font-weight: 500;
 		text-transform: uppercase;
 		color: #FFF;
 		@include transition(all ease-out .3s);
@@ -111,9 +125,6 @@
 			padding-bottom: 0;
 			max-height: 0;
 			overflow: hidden;
-		}
-		a {
-			font-weight: 500;
 		}
 		li {
 			display: block;
@@ -266,7 +277,7 @@ button.menu-toggle.open {
 	}
 	.menu a {
 		display: inline-block;
-		font-weight: 500;
+		font-weight: 400;
 	}
 	.menu > li > a {
 		font-size: 20px;

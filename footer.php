@@ -16,7 +16,7 @@
 
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-
+<div class="ml-loader-wrap"><div class="ml-loader"> <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>       
 <?php wp_footer(); ?>
 
 </body>

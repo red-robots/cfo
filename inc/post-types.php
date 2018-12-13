@@ -153,7 +153,7 @@ function custom_post_column( $column, $post_id ) {
     if($post_type=='team') {
         switch ( $column ) {
             case 'photo' :
-                $img = get_field('team_individual_image',$post_id);
+                $img = get_field('team_photo',$post_id);
                 $img_src = ($img) ? $img['sizes']['thumbnail'] : '';
                 $the_photo = '<span class="tmphoto" style="display:inline-block;width:50px;height:50px;background:#e2e1e1;text-align:center;">';
                 if($img_src) {

@@ -127,6 +127,50 @@ jQuery(document).ready(function ($) {
 		$(this).next().removeClass('show fadeInUp');
 	});
 
+	$('.team-list .team').on("click",function(){
+		var post_id = $(this).attr('data-id');
+		$.ajax({
+			url : frontajax.ajaxurl,
+			type : 'post',
+			dataType : "json",
+			data : {
+				action : 'the_staff_info',
+				post_id : post_id
+			},
+			beforeSend:function(){
+				//$(".ml-loader-wrap").show();
+			},
+			success : function( response ) {
+				if(response.content) {
+					var content = response.content;
+					$('body').append(content);
+					$('body').addClass('modal-open');
+					//$(".ml-loader-wrap").hide();
+				} 
+			}
+		});
+	});
+
+	resize_contentdiv();
+
+	$( window ).resize(function() {
+	  resize_contentdiv();
+	});
+
+	function resize_contentdiv() {
+		if( $(".popup_wrapper").length>0 ) {
+			var wrapHeight = $(".popup_wrapper .details").outerHeight();
+			$(".popup_wrapper .details .inner").css('height',wrapHeight+'px');
+		}
+	}
+
+	$(document).on("click","#closePopup,.popupbg",function(e){
+		e.preventDefault();
+		$('body').removeClass('modal-open');
+		$(".popup_wrapper").fadeOut("fast",function(){
+			$(this).remove();
+		});
+	});
 
 
 });// END #####################################    END

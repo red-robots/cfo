@@ -28,8 +28,8 @@ if( !is_front_page() ) {
 
 	<div id="primary" class="full-content-area clear">
 		<main id="main" class="site-main mid-wrapper clear" role="main">
-			<?php while ( have_posts() ) : the_post();
-				if($banner) { ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php if($banner) { ?>
 					<div class="entry-content">
 						<?php the_content();?>
 					</div>
