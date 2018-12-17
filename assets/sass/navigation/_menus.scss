@@ -92,6 +92,7 @@
 			transition: all ease-out 0.3s;
 		}
 	}
+	li.current_page_parent > a,
 	li.current_page_item > a,
 	li.current_page_item:hover > a,
 	.menu > li:hover > a {
@@ -138,6 +139,11 @@
 					&:hover {
 						opacity: 1;
 					}
+				}
+			}
+			&.current-menu-item > a {
+				@media screen and (min-width: $tabwidth) {
+					opacity: 1;
 				}
 			}
 		}
