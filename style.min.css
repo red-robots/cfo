@@ -2072,8 +2072,8 @@ body.modal-open{overflow:hidden}
 @media screen and (min-width:600px){.popup_wrapper .featured-image{display:inline-block;float:right;margin-left:35px;margin-bottom:20px;width:220px}
 }.popup_wrapper #closePopup{position:absolute;top:-15px;right:-15px;display:block;width:30px;height:30px;text-align:center;color:#FFF;text-decoration:none;border-radius:100px;z-index:20;background:#272727;cursor:pointer;border:1px solid #FFF}
 .popup_wrapper #closePopup span{position:relative;font-size:17px;top:1px;left:1px}
-.page-template-page-login .login-title{margin:30px 0 0;font-weight:400;font-size:28px;text-align:center;position:relative}
-@media screen and (min-width:900px){.page-template-page-login .login-title{font-size:35px}
+.page-template-page-login .login-title{margin:10px 0 0;font-weight:400;font-size:28px;text-align:center;position:relative}
+@media screen and (min-width:900px){.page-template-page-login .login-title{margin:30px 0 0;font-size:35px}
 }.page-template-page-login .login-title .icon{position:relative;top:-2px;left:-16px;font-size:26px}
 .page-template-page-login .row{margin-top:50px}
 @media screen and (min-width:600px){.page-template-page-login .row{margin-left:-20px;margin-right:-20px;margin-top:80px;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:stretch;-ms-flex-wrap:stretch;flex-wrap:stretch;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center}
