@@ -884,7 +884,6 @@ body.modal-open {
   		margin: 0 auto;
   		z-index: 100;
   		height: 100%;
-  		background: #FFF;
 	}
 	.inner {
 		text-align: justify;
@@ -901,11 +900,7 @@ body.modal-open {
 	.contentwrap {
 		min-height: 400px;
 		background: #FFF;
-		padding:30px;
-		margin-top:0;
-		@media screen and (min-width: $tabwidth) {
-			margin-top:0;
-		}
+		padding: 30px;
 	}
 	.titlediv {
 		display: inline-block;
@@ -962,6 +957,90 @@ body.modal-open {
 		}
 	}
 }
+
+.page-template-page-login {
+	.login-title {
+		margin: 16px 0 0;
+		font-weight: 400;
+		font-size: 28px;
+		text-align: center;
+		position: relative;
+		@media screen and (min-width: $midwidth) {
+			font-size: 35px;
+		}
+		.icon {
+			position: relative;
+			top: -2px;
+			left: -16px;
+			font-size: 26px;
+		}
+	}
+	.row {
+		margin-top: 50px;
+		@media screen and (min-width: $tabwidth) {
+			margin-left: -20px;
+			margin-right: -20px;
+			margin-top: 80px;
+			@include flexbox();
+			@include flexbox-wrap(stretch);
+			@include flexbox-align-content(center);
+		}
+	}
+	.login-btn {
+		box-sizing: border-box;
+		width: 100%;
+		text-align: center;
+		margin-bottom: 20px;
+		position: relative;
+		@media screen and (min-width: $tabwidth) {
+			padding: 0 20px;
+			margin-bottom: 0;
+		}
+		.inside {
+			background: $color-theme;
+			height: 100%;
+			position: relative;
+			@include transition(all ease-out .3s);
+			&:hover {
+				background: $color-dark-teal;
+			}
+		}
+	}
+	.login-btn a {
+		position: relative;
+		display: block;
+		text-decoration: none;
+		padding: 8px 20px;
+		text-align: left;
+		color: #FFF;
+		font: {
+			size: 18px;
+			weight: 300;
+		};
+		@include transition(all ease-out .3s);
+		@media screen and (min-width: $tabwidth) {
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		@media screen and (min-width: $midwidth) {
+			font-size: 20px;
+			top: 0;
+			transform: none;
+			padding: 8px 25px;
+		}
+		.icon {
+			position: absolute;
+			right: 15px;
+			top: 10px;
+			margin-right: 0;
+			@include transition(all ease-out .3s);
+		}
+		&:hover .icon {
+			margin-right: -6px;
+		}
+	}
+}
+
 .footer-menu-wrap {
 	position: relative;
 	z-index: 10;
@@ -985,6 +1064,15 @@ body.modal-open {
 			padding-top: 3px;
 			padding-bottom: 3px;
 			transition: all ease-out .2s;
+			@media screen and (min-width: $tabwidth) {
+				font-size: 13px;
+			}
+			@media screen and (min-width: $midwidth) {
+				font-size: 13px;
+			}
+			@media screen and (min-width: $deskwidth) {
+				font-size: 16px;
+			}
 			span {
 				display: inline-block;
 				cursor: pointer;
@@ -1022,6 +1110,7 @@ body.modal-open {
 		position: relative;
 		border-bottom: 2px solid #FFF;
 		padding-bottom: 15px;
+		padding-right: 15px;
 		margin-bottom: 15px;
 		@media screen and (min-width: $tabwidth) {
 			padding-bottom: 10px;
@@ -1050,11 +1139,18 @@ body.modal-open {
 	}
 	.menu ul a {
 		font-size: 14px;
+		@media screen and (min-width: $tabwidth) {
+			font-size: 12px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 14px;
+		}
 		&:hover {
 			opacity: 0.5;		
 		}
 	}
 }
+
 .error-404 {
 	.page-header {
 		margin-top: 70px;

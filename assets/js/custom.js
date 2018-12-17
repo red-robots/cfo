@@ -161,6 +161,8 @@ jQuery(document).ready(function ($) {
 		if( $(".popup_wrapper").length>0 ) {
 			var wrapHeight = $(".popup_wrapper .details").outerHeight();
 			$(".popup_wrapper .details .inner").css('height',wrapHeight+'px');
+			//var insideDiv = $(".popup_wrapper .inside").outerHeight();
+			//$(".popup_wrapper .contentwrap").css('height',insideDiv+'px');
 		}
 	}
 
