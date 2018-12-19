@@ -48,14 +48,6 @@ $circles[] = array('title'=>$circle_title3,'text'=>$circle_text3,'image'=>$circl
 			<div class="description"><?php echo $about_description; ?></div>
 		</div>
 		<?php } ?>
-
-		<div class="photodiv">
-			<?php if($about_image) { ?>
-			<div class="image" style="background-image:url(<?php echo $about_image['url']?>)">
-				<div class="pad"><img src="<?php echo $about_image['url']?>" alt="<?php echo $about_image['title']?>" /></div>
-			</div>
-			<?php } ?>
-		</div>
 	</div>
 
 	<div class="three-boxes">

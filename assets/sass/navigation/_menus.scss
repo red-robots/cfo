@@ -7,16 +7,15 @@
 		position: relative;
 		display: block;
 		clear: none;
-		width: auto;
 		width: 80%;
 		top: 16px;
 		right: -10px;
-		padding-left: 30px;
+		padding-left: 0;
 	}
 	@media screen and (min-width: $midwidth) {
 		top: 0;
-		right: 0;
 		padding-left: 0;
+		right: -12px;
 	}
 	@media screen and (min-width: $deskwidth) {
 		text-align: left;
@@ -46,6 +45,9 @@
 		hyphens: none;
 		float: left;
 		position: relative;
+		&.menu-item-has-children {
+			z-index: 5;
+		}
 	}
 	.menu-main-menu-container {
 		width: 100%;
@@ -59,6 +61,9 @@
 		}
 		@media screen and (min-width: $midwidth) {
 			float: left;
+			padding:0 10px;
+		}
+		@media screen and (min-width: $deskwidth) {
 			padding:0 20px;
 		}
 	}
@@ -68,13 +73,13 @@
 		letter-spacing: 1px;
 		@media screen and (min-width: $tabwidth) {
 			margin-bottom: 2px;
-			font-size: 13px;
+			font-size: 12px;
 			padding:10px 0 10px;
 			font-weight: 400;
 		}
 		@media screen and (min-width: $midwidth) {
 			margin-bottom: 5px;
-			font-size: 15px;
+			font-size: 14px;
 		}
 		@media screen and (min-width: $deskwidth) {
 			font-size: 16px;

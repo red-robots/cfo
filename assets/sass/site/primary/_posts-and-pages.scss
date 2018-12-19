@@ -120,11 +120,12 @@
 	top: 65%;
 	transform: translateY(-65%);
 	z-index: 10;
-	width: 90%;
+	width: 100%;
 	right: 0;
-	text-align: right;
 	box-sizing: border-box;
-	padding-right: 20px;
+	padding-right: 30px;
+	padding-left: 30px;
+	text-align: center;
 	@media screen and (min-width: $tabwidth) {
 		width: 70%;
 		top: 50%;
@@ -132,14 +133,16 @@
 		padding-right: 30px;
 		top: 65%;
 		transform: translateY(-65%);
+		padding-right: 20px;
+		padding-left: 0;
+		text-align: right;
 	}
 	@media screen and (min-width: $midwidth) {
-		width: 50%;
-		top: 60%;
-		transform: translateY(-60%);
+		width: 75%;
+		margin-top: 20px;
 	}
 	@media screen and (min-width: $deskwidth) {
-		width: 40%;
+		width: 660px;
 	}
 	p {
 		margin: 0 0;
@@ -157,18 +160,32 @@
 		display: inline-block;
 		font-weight: 500;
 		font-size: 25px;
-		color: #928143;
+		color: #FFF;
 		line-height: 1;
 		hyphens: none;
 		position: relative;
-		border-bottom: 4px solid #98b2bf;
 		padding-bottom: 4%;
 		@media screen and (min-width: $tabwidth) {
 			font-size: 5vw;
-			padding-bottom: 8%;
 		}
 		@media screen and (min-width: $deskwidth) {
 			font-size: 50px;
+		}
+		&:after {
+			content:"";
+			display: block;
+			width: 100%;
+			height: 2px;
+			background: $color-gold;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			@media screen and (min-width: $midwidth) {
+				width: 87%;
+			}
+			@media screen and (min-width: $deskwidth) {
+				width: 585px;
+			}
 		}
 	}
 }
@@ -201,16 +218,19 @@
 .about-info {
 	padding-top: 40px;
 	padding-bottom: 40px;
+	text-align: center;
 	@media screen and (min-width: $tabwidth) {
 		padding-top: 80px;
-		padding-bottom: 70px;
+		padding-bottom: 10px;
 	}
 	.titlediv {
 		margin: 0 0;	
 		line-height: 1.2;
+		padding-left: 0;
+		padding-right: 0;
 		@media screen and (min-width: $tabwidth) {
-			width: 72%;
-			float: left;
+			padding-left: 6%;
+			padding-right: 6%;
 		}
 		p {
 			hyphens: none;
@@ -218,13 +238,10 @@
 	}
 	.title {
 		font-family: $font-BemboStd;
-		font-size: 30px;
-		color: $color-gold;
-		padding-bottom: 15px;
-		padding-right: 0;
-		border-bottom: 2px solid $color-dark-teal;
-		@media screen and (min-width: $tabwidth) {
-			padding-right: 50px;
+		font-size: 28px;
+		color: $color-theme;
+		@media screen and (min-width: $midwidth) {
+			font-size: 33px;
 		}
 		p {
 			margin: 0 0;
@@ -233,11 +250,10 @@
 	.description {
 		padding-top: 20px;
 		line-height: 1.5;
-		padding-right: 0;
-		margin-bottom: 50px;
-		@media screen and (min-width: $tabwidth) {
-			padding-right: 50px;
-			margin-bottom: 0;
+		font-size: 18px;
+		font-weight: normal;
+		@media screen and (min-width: $midwidth) {
+			font-size: 20px;
 		}
 		p {
 			margin-top: 0;
@@ -272,7 +288,10 @@
 	}
 }
 .three-boxes {
-	margin-top: 50px;
+	margin-top: 20px;
+	@media screen and (min-width: $tabwidth) {
+		margin-top: 50px;
+	}
 	.row {
 		@media screen and (min-width: $tabwidth) {
 			display: flex;
@@ -293,8 +312,11 @@
 		width: 280px;
 		margin: 0 auto;
 		@media screen and (min-width: $tabwidth) {
-			width: 240px;
+			width: 90%;
 			margin: 0 0;
+		}
+		@media screen and (min-width: $midwidth) {
+			width: 230px;
 		}
 	}
 	.imgwrap {
@@ -311,13 +333,16 @@
 			font-weight: 400;
 			text-align: center;
 			margin: 0 0;
-			font-size: 22px;
+			font-size: 25px;
 			color: #FFF;
 			text-transform: uppercase;
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
 			z-index: 10;
+			@media screen and (min-width: $midwidth) {
+				font-size: 28px;
+			}
 		}
 		img {
 			width: 100%;
@@ -334,8 +359,8 @@
 			top: 0;
 			left: 0;
 			z-index: 5;
-			box-shadow: inset 0px 0px 0 200px $color-gold;
-			opacity: 0.8;
+			box-shadow: inset 0px 0px 0 200px $color-dark-teal;
+			opacity: 0.88;
 			border-radius: 200%;
 			@include transition(all ease-out .2s);
 		}
@@ -355,10 +380,10 @@
 			@include transition(all ease-out .2s);
 		}
 		&:hover {
-			border-color: $color-dark-teal;
+			border-color: $color-gold;
 			&:before {
 				border:2px solid #FFF;
-				box-shadow: inset 0px 0px 0 $color-gold;
+				box-shadow: inset 0px 0px 0 $color-dark-teal;
 			}
 			&:after {
 				opacity: 1;
@@ -385,13 +410,12 @@
 
 	.desc {
 		display: block;
-		border-top: 2px solid $color-dark-teal;
-		padding-top:25px;
 		margin-top: 25px;
-		font-family: $font-BemboStd;
-		color: $color-gold;
-		font-size:20px;
+		font-family: $font-ProximaNova;
+		font-weight: 500;
+		font-size: 18px;
 		line-height: 1.2;
+		color: $color-theme;
 		text-align: center;
 		padding-right: 0;
 		padding-left: 0;
@@ -401,7 +425,7 @@
 			padding-right: 30px;
 			padding-left: 30px;
 			visibility: hidden;
-			display: block;
+			display: none;
 		}
 	}
 	.desc.show {
@@ -423,7 +447,7 @@
 	}
 }
 .home #primary {
-	padding-bottom: 50px;
+	padding-bottom: 70px;
 }
 .site-footer {
 	background-color: #878180;
@@ -515,13 +539,13 @@
 	}
 	a {
 		text-transform: uppercase;
-		color: $color-gold;
+		color: #d2b851;
 		cursor: pointer;
 		font-size: 14px;
 		text-decoration: none;
 		transition: all ease-out .3s;
 		&:hover {
-			color: #d2b851;
+			color: $color-dark-teal;
 		}
 	}
 }
@@ -546,7 +570,7 @@
     		}
     		@media screen and (min-width: $midwidth) {
     			font-size: 60px;
-    			margin-bottom: 40px;
+    			margin-bottom: 45px;
     		}
     		span {
     			display: inline-block;
@@ -1042,6 +1066,186 @@ body.modal-open {
 	}
 }
 
+.section-title {
+	margin: 30px 0 20px;
+	text-transform: uppercase;
+	text-align: center;
+	font: {
+		family: $font-BemboStd;
+		size: 35px;
+		weight: 400;
+	}
+	line-height: 1.1;
+	.span {
+		display: inline-block;
+		border-bottom: 1px solid $color-gold;
+	}
+}
+.row-info {
+	margin-bottom: 20px;
+}
+.contact-info .info {
+	float: left;
+	width: auto;
+	display: inline-block;
+	span {
+		color: $color-theme;
+		font-size: 15px;
+		@media screen and (min-width: $tabwidth) {
+			font-size: 18px;
+		}
+		@media screen and (min-width: $midwidth) {
+			font-size: 20px;
+		}
+	}
+	&.label {
+		text-transform: uppercase;
+		width: 43.5%;
+		text-align: right;
+		span {
+			color: $color-dark-teal;	
+			padding-right: 5%;
+		}
+		@media screen and (min-width: $tabwidth) {
+			width: 47.5%;
+			span {
+				width: auto;
+				padding-right: 25px;
+			}
+		}
+	}
+	&.value {
+		width: 56.5%;
+		text-align: left;
+		span {
+			padding-left: 5%;
+		}
+		@media screen and (min-width: $tabwidth) {
+			width: 52.5%;
+			span {
+				padding-left: 25px;
+			}
+		}
+	}
+	a {
+		text-decoration: none;
+		color: $color-theme;
+	}
+}
+.contact-info .section-two {
+	margin-top: 25px;
+	.section-title {
+		margin-bottom: 40px;
+	}
+}
+.contact-info .locations {
+	@media screen and (min-width: $tabwidth) {
+		margin-left: -20px;
+		margin-right: -20px;
+	}
+}
+.contact-info .office {
+	text-align: left;
+	margin-bottom: 30px;
+	@media screen and (min-width: $tabwidth) {
+		width: 50%;
+		float: left;
+	}
+	.name, .map-image, .map-image img, .address, .link {
+		width: 100%;
+		float: left;
+		box-sizing: border-box;
+	}
+	.inside {
+		@media screen and (min-width: $tabwidth) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+	.name {
+		background: $color-theme;
+		color: #FFF;
+		font-size: 18px;
+		text-align: center;
+		text-transform: uppercase;
+		padding: 6px 20px;
+	}
+	.address {
+		background: #878180;
+		color: #FFF;
+		padding: 15px 20px;
+		font-size: 18px;
+	}
+	.link {
+		background: $color-dark-teal;
+		a {
+			display: block;
+			color: #FFF;
+			text-decoration: none;
+			padding: 5px 20px;
+			font-size: 18px;
+			position: relative;
+		}
+		.icon {
+			position: absolute;
+			right: 15px;
+			top: 7px;
+			@include transition(all ease-out .3s);
+		}
+		a:hover .icon {
+			margin-right: -7px;
+		}
+	}
+}
+.contact-bottom {
+	background: $color-theme;
+	color: #FFF;
+	margin-top: 60px;
+	position: relative;
+	.section-title {
+		margin-bottom: 0;
+	}
+	.description {
+		margin-top: 5px;
+		margin-bottom: 18px;
+	}
+	.buttondiv {
+		margin-bottom: 30px;
+		a {
+			display: inline-block;
+			text-decoration: none;
+			background: $color-dark-teal;
+			text-transform: uppercase;
+			font-size: 13px;
+			font-weight: 500;
+			line-height: 13px;
+			letter-spacing: 2px;
+			padding:6px 8px 5px;
+			color: #FFF;
+			@include transition (all ease-out .3s);
+			&:hover {
+				background: $color-gold;
+			}
+		}
+	}
+	.text {
+		position: relative;
+		z-index: 5;
+	}
+	.bgImage {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}
+.subpage #primary.contact-content {
+	padding-bottom: 0;
+}
 .footer-menu-wrap {
 	position: relative;
 	z-index: 10;
