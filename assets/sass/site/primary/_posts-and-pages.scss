@@ -557,10 +557,11 @@
 .subpage-banner {
 	position: relative;
 	.titlediv {
+		max-width: 900px;
 		width: 100%;
 		position: absolute;
 		bottom: 0;
-		left: 0;
+		right: 0;
 		z-index: 5;
 		h1 {
 			margin: 0 0 20px;
@@ -1324,8 +1325,20 @@ body.modal-open {
 			height: 100%;
 		}
 		.inside {
-			border:1px solid $color-theme;
 			height: 100%;
+			position: relative;
+			&:after {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 40%;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				border-left: 1px solid $color-theme;
+				border-right: 1px solid $color-theme;
+				border-bottom: 1px solid $color-theme;
+			}
 		}
 		.post-info {
 			margin-bottom: 10px;
@@ -1339,6 +1352,11 @@ body.modal-open {
 		}
 		.textwrap {
 			padding:20px;
+			box-sizing: border-box;
+			border: 1px solid $color-theme;
+			border-bottom: none;
+			position: relative;
+			z-index: 2;
 		}
 		.excerpt {
 			font-size: 13px;
@@ -1350,14 +1368,14 @@ body.modal-open {
 		}
 	}
 	.featimage {
-		width: 100.6%;
+		width: 100%;
 		height: 81px;
 		background-size:cover;
 		background-repeat: no-repeat;
 		background-position: center;
 		position: relative;
-		top: -1px;
-		left: -1px;
+		bottom: -2px;
+		z-index: 5;
 	}
 	.buttondiv a {
 		display: inline-block;
@@ -1372,7 +1390,7 @@ body.modal-open {
 .category-name {
 	background: url('images/text-bg.png') center center no-repeat;
 	background-size: cover;
-	padding: 30px 20px 15px;
+	padding: 35px 20px 20px;
 	h2 {
 		margin: 0 0;
 		color: #FFF;
@@ -1384,5 +1402,117 @@ body.modal-open {
 		line-height: 1.2;
 		text-align: center;
 		text-transform: uppercase;
+	}
+}
+
+.content-sidebar {
+	margin-bottom: 30px;
+	@media screen and (min-width: $tabwidth) {
+		width: 67%;
+		float: left;
+		margin-bottom: 0;
+	}
+	.entry-title {
+		margin-top: 0;
+	}
+}
+.sidebar {
+	@media screen and (min-width: $tabwidth) {
+		width: 26%;
+		&.left {
+			float: left;
+		}
+		&.right {
+			float: right;
+			margin-top: 10px;
+		}
+	}
+	.widget_search {
+		position: relative;
+	}
+	.widget_search form {
+		margin: 0 0;
+	}
+	.widget_search label {
+		display: block;
+		width: 100%;
+		position: relative;
+		.search-field {
+			height: 35px;
+			line-height: 35px;
+			width: 100%;
+			border-radius: 0;
+			box-sizing: border-box;
+			padding: 5px 10px;
+		}
+	}
+	.search-submit {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 2;
+		border: none;
+		height: 100%;
+		width: 70px;
+		font-size: 11px;
+		padding: 5px;
+		text-shadow: none;
+		background: $color-theme;
+		color: #FFF;
+		box-shadow: none;
+		-webkit-appearance: none;
+		height: 35px;
+		line-height: 28px;
+		box-sizing: border-box;
+		@include transition(all ease-out .3s);
+		&:hover {
+			box-shadow: none;
+			background: $color-dark-teal;
+		}
+	}
+	.widget-title {
+		margin: 0 0;
+		text-transform: uppercase;
+		font-size: 20px;
+		font-weight: 500;
+	}
+	.widget ul {
+		margin: 5px 0 0 35px;
+		padding: 0 0;
+		a {
+			color: $color-dark-teal;
+			text-decoration: none;
+			&:hover {
+				color: $color-theme;
+			}
+		}
+	}
+}	
+.breadcrumb {
+	text-transform: uppercase;
+	font-size: 12px;
+	margin-bottom: 30px;
+	a {
+		text-decoration: none;
+		color: $color-dark-teal;
+		&:hover {
+			color: $color-gold;
+		}
+	}
+	.sep {
+		margin-left: 4px;
+		margin-right: 4px;
+	}
+	.active {
+		color: #CCC;
+	}
+}
+.single-post #primary.has-banner {
+	padding-top: 10px;
+	.breadcrumb {
+		margin-bottom: 20px;
+	}
+	.sidebar.right {
+		margin-top: 22px;
 	}
 }

@@ -1833,9 +1833,13 @@ html[xmlns] .flexslider .slides{display:block}
 }.widget{margin:0 0 1.5em}
 .widget select{max-width:100%}
 *,div,h1,h2,h3,h4,h5,h6,p,li,a,span,strong{overflow-wrap:normal;word-wrap:normal;-ms-word-break:normal;word-break:normal;word-break:normal;-ms-hyphens:none;-moz-hyphens:none;-webkit-hyphens:none;hyphens:none;page-break-inside:avoid}
+form *{box-sizing:border-box}
 html{margin:0}
+a{-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
 body{font-family:"ProximaNova",sans-serif;font-weight:400;color:#3b505a;font-size:16px;line-height:1.5;position:relative;background:#FFF}
 .nopadding{padding:0 0 !important}
+.nopadtop{padding-top:0 !important}
+.nopadbottom{padding-bottom:0 !important}
 #page{position:relative;overflow:hidden}
 .subpage #page{padding-top:84px}
 @media screen and (min-width:700px){.subpage #page{padding-top:0}
@@ -1859,9 +1863,6 @@ h1,h2,h3,h4,h5,h6{font-weight:600}
 @media screen and (min-width:700px){.content-area{width:66%;float:left;margin:0}
 }@media screen and (min-width:1200px){}
 .full-content-area{width:100%}
-.widget-area{width:100%;margin:0 auto}
-@media screen and (min-width:700px){.widget-area{width:26%;float:right;margin:0}
-}@media screen and (min-width:1200px){}
 .logo,h1.logo{width:80px;position:relative;z-index:110}
 @media screen and (min-width:700px){.logo,h1.logo{width:25%;float:left;margin:0}
 }@media screen and (min-width:1200px){}
@@ -2031,7 +2032,7 @@ body.scrolled.home #masthead{background:#143448;box-shadow:0 2px 12px 0 rgba(0,0
 }.clientLogin a{text-transform:uppercase;color:#d2b851;cursor:pointer;font-size:14px;text-decoration:none;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
 .clientLogin a:hover{color:#98b2bf}
 .subpage-banner{position:relative}
-.subpage-banner .titlediv{width:100%;position:absolute;bottom:0;left:0;z-index:5}
+.subpage-banner .titlediv{max-width:900px;width:100%;position:absolute;bottom:0;right:0;z-index:5}
 .subpage-banner .titlediv h1{margin:0 0 20px;text-align:right;color:#FFF;font-size:35px;font-weight:500;line-height:1}
 @media screen and (min-width:700px){.subpage-banner .titlediv h1{font-size:50px;margin-bottom:30px}
 }@media screen and (min-width:980px){.subpage-banner .titlediv h1{font-size:60px;margin-bottom:45px}
@@ -2175,16 +2176,41 @@ body.scrolled.home #masthead{background:#143448;box-shadow:0 2px 12px 0 rgba(0,0
 @media screen and (min-width:700px){.category-list .post-entry{width:50%;margin-bottom:30px}
 }@media screen and (min-width:980px){.category-list .post-entry{width:33.33333%}
 }.category-list .post-entry .inner-pad{padding-left:15px;padding-right:15px;height:100%}
-.category-list .post-entry .inside{border:1px solid #3b505a;height:100%}
+.category-list .post-entry .inside{height:100%;position:relative}
+.category-list .post-entry .inside:after{content:"";display:block;width:100%;height:40%;position:absolute;bottom:0;left:0;border-left:1px solid #3b505a;border-right:1px solid #3b505a;border-bottom:1px solid #3b505a}
 .category-list .post-entry .post-info{margin-bottom:10px}
 .category-list .post-entry .post-title{margin:0 0 3px;line-height:1.2;font-weight:500;font-size:18px;text-transform:uppercase}
-.category-list .post-entry .textwrap{padding:20px}
+.category-list .post-entry .textwrap{padding:20px;box-sizing:border-box;border:1px solid #3b505a;border-bottom:0;position:relative;z-index:2}
 .category-list .post-entry .excerpt{font-size:13px;margin:0 0 15px}
 .category-list .post-entry .date{font-size:12px;color:#928143}
-.category-list .featimage{width:100.6%;height:81px;background-size:cover;background-repeat:no-repeat;background-position:center;position:relative;top:-1px;left:-1px}
+.category-list .featimage{width:100%;height:81px;background-size:cover;background-repeat:no-repeat;background-position:center;position:relative;bottom:-2px;z-index:5}
 .category-list .buttondiv a{display:inline-block;padding:4px 12px 2px;text-transform:uppercase;font-size:12px;font-weight:500;letter-spacing:1px;text-decoration:none}
-.category-name{background:url("images/text-bg.png") center center no-repeat;background-size:cover;padding:30px 20px 15px}
+.category-name{background:url("images/text-bg.png") center center no-repeat;background-size:cover;padding:35px 20px 20px}
 .category-name h2{margin:0;color:#FFF;font-family:"BemboStd","Georgia",serif;font-weight:normal;font-size:35px;line-height:1.2;text-align:center;text-transform:uppercase}
+.content-sidebar{margin-bottom:30px}
+@media screen and (min-width:700px){.content-sidebar{width:67%;float:left;margin-bottom:0}
+}.content-sidebar .entry-title{margin-top:0}
+@media screen and (min-width:700px){.sidebar{width:26%}
+.sidebar.left{float:left}
+.sidebar.right{float:right;margin-top:10px}
+}.sidebar .widget_search{position:relative}
+.sidebar .widget_search form{margin:0}
+.sidebar .widget_search label{display:block;width:100%;position:relative}
+.sidebar .widget_search label .search-field{height:35px;line-height:35px;width:100%;border-radius:0;box-sizing:border-box;padding:5px 10px}
+.sidebar .search-submit{position:absolute;top:0;right:0;z-index:2;border:0;height:100%;width:70px;font-size:11px;padding:5px;text-shadow:none;background:#3b505a;color:#FFF;box-shadow:none;-webkit-appearance:none;height:35px;line-height:28px;box-sizing:border-box;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
+.sidebar .search-submit:hover{box-shadow:none;background:#98b2bf}
+.sidebar .widget-title{margin:0;text-transform:uppercase;font-size:20px;font-weight:500}
+.sidebar .widget ul{margin:5px 0 0 35px;padding:0}
+.sidebar .widget ul a{color:#98b2bf;text-decoration:none}
+.sidebar .widget ul a:hover{color:#3b505a}
+.breadcrumb{text-transform:uppercase;font-size:12px;margin-bottom:30px}
+.breadcrumb a{text-decoration:none;color:#98b2bf}
+.breadcrumb a:hover{color:#928143}
+.breadcrumb .sep{margin-left:4px;margin-right:4px}
+.breadcrumb .active{color:#CCC}
+.single-post #primary.has-banner{padding-top:10px}
+.single-post #primary.has-banner .breadcrumb{margin-bottom:20px}
+.single-post #primary.has-banner .sidebar.right{margin-top:22px}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}

@@ -10,8 +10,14 @@
 	hyphens: none;
 	page-break-inside: avoid;
 }
+form * {
+	box-sizing: border-box;
+}
 html {
 	margin: 0 0;
+}
+a {
+	@include transition (all ease-out .3s);
 }
 body {
 	font-family: $font-ProximaNova;
@@ -24,6 +30,12 @@ body {
 }
 .nopadding {
 	padding: 0 0!important;
+}
+.nopadtop {
+	padding-top: 0!important;
+}
+.nopadbottom {
+	padding-bottom: 0!important;
 }
 #page {
 	position: relative;
@@ -90,19 +102,6 @@ h1,h2,h3,h4,h5,h6 {font-weight:600}
 }
 .full-content-area {
 	width: 100%;
-}
-.widget-area {
-	width: 100%;
-	margin: 0px auto;
-	
-	@media screen and (min-width: $tabwidth) {
-		width: 26%;
-		float: right;
-		margin: 0;
-	}
-	@media screen and (min-width: $deskwidth) {
-		/*width: 1200px;*/
-	}
 }
 
 /* Logo */
