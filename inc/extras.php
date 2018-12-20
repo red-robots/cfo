@@ -130,3 +130,43 @@ function get_page_id_by_template($fileName) {
 	}
 	return $page_id;
 }
+
+
+function get_posts_by_categories($taxonomy='category',$numberPost=3) {
+    global $wpdb;
+    $tax_terms = get_terms($taxonomy, array('hide_empty' => true));
+    $prefix = $wpdb->prefix;
+    $records = array();
+    if($tax_terms) {
+        foreach($tax_terms as $t) {
+            $term_id = $t->term_id;
+            $term_name = $t->name;
+            $limit = ($numberPost>1) ? ' LIMIT ' . $numberPost :'';
+            $query = "SELECT rel.term_taxonomy_id as term_id,p.ID as post_id FROM ".$prefix."term_relationships as rel,".$prefix."posts as p
+                      WHERE rel.object_id=p.ID AND rel.term_taxonomy_id=".$term_id." AND p.post_status='publish' ORDER BY p.menu_order ASC" . $limit;
+            $results = $wpdb->get_results( $query, OBJECT );
+            $items = ($results) ? $results : '';
+            $args = array(
+                    'term_id'=>$term_id,
+                    'term_name'=>$term_name,
+                    'posts'=>$items
+                );
+            $records[] = $args;
+        }
+    }     
+    return $records;
+}
+
+
+function shortenText($str, $limit, $brChar = ' ', $pad = '...')  {
+    if (empty($str) || strlen($str) <= $limit) {
+        return $str;
+    }
+    $output = substr($str, 0, ($limit+1));
+    $brCharPos = strrpos($output, $brChar);
+    $output = substr($output, 0, $brCharPos);
+    $output = preg_replace('#\W+$#', '', $output);
+    $output .= $pad;
+    return $output;
+}
+

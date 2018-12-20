@@ -22,6 +22,9 @@ body {
 	position: relative;
 	background: #FFF;
 }
+.nopadding {
+	padding: 0 0!important;
+}
 #page {
 	position: relative;
 	overflow: hidden;	
@@ -224,6 +227,133 @@ body.admin-bar {
 	font-size:20px;
 }
 
+.footer-menu-wrap {
+	position: relative;
+	z-index: 10;
+	margin-right: -20px;
+	margin-left: -20px;
+	ul {
+		margin: 0 0;
+		padding: 0 0;
+		list-style: none;
+		a {
+			font-family: $font-SofiaPro;
+			font:{
+				size: 16px;
+				weight: 600;
+			};
+			display: inline-block;
+			color: #FFF;
+			text-decoration: none;
+			text-transform: uppercase;
+			
+			padding-top: 3px;
+			padding-bottom: 3px;
+			transition: all ease-out .2s;
+			@media screen and (min-width: $tabwidth) {
+				font-size: 13px;
+			}
+			@media screen and (min-width: $midwidth) {
+				font-size: 13px;
+			}
+			@media screen and (min-width: $deskwidth) {
+				font-size: 16px;
+			}
+			span {
+				display: inline-block;
+				cursor: pointer;
+				transition: all ease-out .2s;
+			}
+			&:hover span {
+				opacity: 0.5;
+			}
+		}
+	}
+	.menu {
+		@media screen and (min-width: $tabwidth) {
+			display: flex;
+			justify-content: space-between;
+			align-content: center;
+			align-items: top;
+		}
+	}
+	.menu > li {
+		display: block;
+		width: 100%;
+		box-sizing: border-box;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-top: 18px;
+		@media screen and (min-width: $tabwidth) {
+			margin-top: 0;
+		}
+	}
+	.menu > li:first-child {
+		margin-top: 0;
+	}
+	.menu > li > a {
+		display: block;
+		position: relative;
+		border-bottom: 2px solid #FFF;
+		padding-bottom: 15px;
+		padding-right: 15px;
+		margin-bottom: 15px;
+		@media screen and (min-width: $tabwidth) {
+			padding-bottom: 10px;
+		}
+		&:after {
+			content: "\f054";
+			display: inline-block;
+			font: normal normal normal 14px/1 FontAwesome;
+			font-size: inherit;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			position: absolute;
+			right: 0;
+			transition: all ease-out .3s;
+			margin-right: 0;
+		}
+	}
+	.menu > li:hover > a {
+		&:after {
+			margin-right: -5px;
+		}
+	}
+	.menu ul li {
+		margin-bottom: 2px;
+	}
+	.menu ul a {
+		font-size: 14px;
+		@media screen and (min-width: $tabwidth) {
+			font-size: 12px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 14px;
+		}
+		&:hover {
+			opacity: 0.5;		
+		}
+	}
+}
+
+.error-404 {
+	.page-header {
+		margin-top: 70px;
+	}
+	.page-title {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.page-content {
+		margin-top: 0;
+		p {
+			margin-top: 0;
+			margin-bottom: 1.5em;
+		}
+	}
+}
+
 .ml-loader-wrap {
 	display: none;
 	position: fixed;
@@ -375,5 +505,4 @@ body.admin-bar {
       opacity: 1;
     }
 }
-
 

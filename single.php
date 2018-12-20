@@ -6,8 +6,11 @@
  *
  * @package ACStarter
  */
+get_header(); 
+$post_type = get_post_type(); ?>
+<?php if($post_type=='post') { ?>
 
-get_header(); ?>
+<?php } ?>
 
 	<div id="primary" class="full-content-area clear">
 		<main id="main" class="site-main mid-wrapper clear" role="main">
@@ -26,6 +29,7 @@ get_header(); ?>
 			<?php endwhile; ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
+
 
 <?php
 get_footer();
