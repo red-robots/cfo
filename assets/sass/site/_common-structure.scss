@@ -35,20 +35,15 @@ body {
 .site-main {
 	min-height: 20em;
 }
-h1,h2,h3,h4,h5,h6 {font-weight:600}
-.mid-content-wrap,
-h1,h2,h3,h4,h5,h6,p,li,a,span,strong {
-	overflow-wrap: normal;
-	word-wrap: normal;
-	-ms-word-break: normal;
-	word-break: normal;
-	word-break: normal;
-	-ms-hyphens: none;
-	-moz-hyphens: none;
-	-webkit-hyphens: none;
-	hyphens: none;
-	page-break-inside: avoid;
+p a {
+	text-decoration: none;
+	color: $color-dark-teal;
+	@include transition (all ease-out .3s);
+	&:hover {
+		color: $color-gold;
+	}
 }
+h1,h2,h3,h4,h5,h6 {font-weight:600}
 .wrapper, .clear {clear: both;}
 .wrapper:before, .wrapper:after, .clear:before,.clear:after {content: " "; display: table; }
 .wrapper:after, .clear:after {clear: both;}

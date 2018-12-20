@@ -24,10 +24,14 @@ function acstarter_body_classes( $classes ) {
 		$classes[] = 'hfeed';
 	}
 
+	$browsers = ['is_iphone', 'is_chrome', 'is_safari', 'is_NS4', 'is_opera', 'is_macIE', 'is_winIE', 'is_gecko', 'is_lynx', 'is_IE', 'is_edge'];
+	$classes[] = join(' ', array_filter($browsers, function ($browser) {
+        return $GLOBALS[$browser];
+    }));
+
 	return $classes;
 }
 add_filter( 'body_class', 'acstarter_body_classes' );
-
 add_action( 'wp_ajax_nopriv_the_staff_info', 'the_staff_info' );
 add_action( 'wp_ajax_the_staff_info', 'the_staff_info' );
 function the_staff_info() {

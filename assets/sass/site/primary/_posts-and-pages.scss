@@ -238,17 +238,17 @@
 	}
 	.title {
 		font-family: $font-BemboStd;
-		font-size: 28px;
+		font-size: 35px;
 		color: $color-theme;
 		@media screen and (min-width: $midwidth) {
-			font-size: 33px;
+			font-size: 46px;
 		}
 		p {
 			margin: 0 0;
 		}
 	}
 	.description {
-		padding-top: 20px;
+		padding-top: 10px;
 		line-height: 1.5;
 		font-size: 18px;
 		font-weight: normal;
@@ -786,20 +786,17 @@
 	.team {
 		box-sizing: border-box;
 		margin-bottom: 40px;
-		flex-basis: 100%;
 		width: 100%;
 		padding-left: 30px;
 		padding-right: 30px;
 		cursor: pointer;
 		@media screen and (min-width: $tabwidth) {
-			flex-basis: 50%;
 			width: 50%;
 			padding-left: 10px;
 			padding-right: 10px;
 			margin-bottom: 40px;
 		}
 		@media screen and (min-width: $midwidth) {
-			flex-basis: 25%;
 			width: 25%;
 		}
 	}
@@ -877,6 +874,16 @@
 		.buttondiv a {
 			border-color: #FFF;
 			color: #FFF;
+		}
+	}
+}
+body.is_safari .team-list {
+	.team {
+		@media screen and (min-width: $tabwidth) {
+			width: 49%;
+		}
+		@media screen and (min-width: $midwidth) {
+			width: 24%;
 		}
 	}
 }

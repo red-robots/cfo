@@ -1839,8 +1839,9 @@ body{font-family:"ProximaNova",sans-serif;font-weight:400;color:#3b505a;font-siz
 .subpage #page{padding-top:84px}
 @media screen and (min-width:700px){.subpage #page{padding-top:0}
 }.site-main{min-height:20em}
+p a{text-decoration:none;color:#98b2bf;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
+p a:hover{color:#928143}
 h1,h2,h3,h4,h5,h6{font-weight:600}
-.mid-content-wrap,h1,h2,h3,h4,h5,h6,p,li,a,span,strong{overflow-wrap:normal;word-wrap:normal;-ms-word-break:normal;word-break:normal;word-break:normal;-ms-hyphens:none;-moz-hyphens:none;-webkit-hyphens:none;hyphens:none;page-break-inside:avoid}
 .wrapper,.clear{clear:both}
 .wrapper:before,.wrapper:after,.clear:before,.clear:after{content:" ";display:table}
 .wrapper:after,.clear:after{clear:both}
@@ -1947,10 +1948,10 @@ body.scrolled.home #masthead{background:#143448;box-shadow:0 2px 12px 0 rgba(0,0
 }.about-info .titlediv{margin:0;line-height:1.2;padding-left:0;padding-right:0}
 @media screen and (min-width:700px){.about-info .titlediv{padding-left:6%;padding-right:6%}
 }.about-info .titlediv p{-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}
-.about-info .title{font-family:"BemboStd","Georgia",serif;font-size:28px;color:#3b505a}
-@media screen and (min-width:980px){.about-info .title{font-size:33px}
+.about-info .title{font-family:"BemboStd","Georgia",serif;font-size:35px;color:#3b505a}
+@media screen and (min-width:980px){.about-info .title{font-size:46px}
 }.about-info .title p{margin:0}
-.about-info .description{padding-top:20px;line-height:1.5;font-size:18px;font-weight:normal}
+.about-info .description{padding-top:10px;line-height:1.5;font-size:18px;font-weight:normal}
 @media screen and (min-width:980px){.about-info .description{font-size:20px}
 }.about-info .description p{margin-top:0;margin-bottom:1em}
 .about-info .photodiv{width:300px;margin:0 auto}
@@ -2047,9 +2048,9 @@ body.scrolled.home #masthead{background:#143448;box-shadow:0 2px 12px 0 rgba(0,0
 .bottom-info .btn:hover{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2);background:transparent}
 .team-list{margin-top:40px}
 @media screen and (min-width:700px){.team-list .row{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-align-content:left;-ms-flex-line-pack:left;align-content:left;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}
-}.team-list .team{box-sizing:border-box;margin-bottom:40px;-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%;width:100%;padding-left:30px;padding-right:30px;cursor:pointer}
-@media screen and (min-width:700px){.team-list .team{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;width:50%;padding-left:10px;padding-right:10px;margin-bottom:40px}
-}@media screen and (min-width:980px){.team-list .team{-webkit-flex-basis:25%;-ms-flex-preferred-size:25%;flex-basis:25%;width:25%}
+}.team-list .team{box-sizing:border-box;margin-bottom:40px;width:100%;padding-left:30px;padding-right:30px;cursor:pointer}
+@media screen and (min-width:700px){.team-list .team{width:50%;padding-left:10px;padding-right:10px;margin-bottom:40px}
+}@media screen and (min-width:980px){.team-list .team{width:25%}
 }.team-list .inside{box-shadow:0 0 21px 0 rgba(0,0,0,0.28)}
 .team-list .photo{position:relative;background:#e1e1e1;width:100%;float:left}
 .team-list .photo img{width:100%;height:auto;float:left}
@@ -2063,7 +2064,9 @@ body.scrolled.home #masthead{background:#143448;box-shadow:0 2px 12px 0 rgba(0,0
 }.team-list .buttondiv a{display:inline-block;border:1px solid #98b2bf;color:#98b2bf;padding:1px 25px;font-size:16px;font-weight:500;text-decoration:none;line-height:1}
 .team-list .team:hover .info{background:#98b2bf}
 .team-list .team:hover .buttondiv a{border-color:#FFF;color:#FFF}
-body.modal-open{overflow:hidden}
+@media screen and (min-width:700px){body.is_safari .team-list .team{width:49%}
+}@media screen and (min-width:980px){body.is_safari .team-list .team{width:24%}
+}body.modal-open{overflow:hidden}
 .popup_wrapper{width:100%;height:100%;position:fixed;top:0;left:0;z-index:20000;padding:20px 20px}
 @media screen and (min-width:700px){.popup_wrapper{padding:4% 20px 4%}
 }.popup_wrapper .animated{-webkit-animation-duration:.8s;animation-duration:.8s}
