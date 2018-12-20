@@ -1,20 +1,14 @@
-* { -webkit-hyphens: none; }
-div {
-	/* These are technically the same, but use both */
-	overflow-wrap: break-word;
-	word-wrap: break-word;
-
-	-ms-word-break: break-all;
-	/* This is the dangerous one in WebKit, as it breaks things wherever */
-	word-break: break-all;
-	/* Instead use this non-standard one: */
-	word-break: break-word;
-
-	/* Adds a hyphen where the word breaks, if supported (No Blink) */
-	-ms-hyphens: auto;
-	-moz-hyphens: auto;
-	-webkit-hyphens: auto;
-	hyphens: auto;
+*,div, h1,h2,h3,h4,h5,h6,p,li,a,span,strong {
+	overflow-wrap: normal;
+	word-wrap: normal;
+	-ms-word-break: normal;
+	word-break: normal;
+	word-break: normal;
+	-ms-hyphens: none;
+	-moz-hyphens: none;
+	-webkit-hyphens: none;
+	hyphens: none;
+	page-break-inside: avoid;
 }
 html {
 	margin: 0 0;
@@ -27,18 +21,6 @@ body {
 	line-height: 1.5;
 	position: relative;
 	background: #FFF;
-}
-h1,h2,h3,h4,h5,h6,p,li,a,span,strong {
-    overflow-wrap: normal;
-    word-wrap: normal;
-    -ms-word-break: normal;
-    word-break: normal;
-    word-break: normal;
-    -ms-hyphens: none;
-    -moz-hyphens: none;
-    -webkit-hyphens: none;
-    hyphens: none;
-    page-break-inside: avoid;
 }
 #page {
 	position: relative;

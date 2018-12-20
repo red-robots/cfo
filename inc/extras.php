@@ -54,21 +54,45 @@ function get_staff_info_html($obj) {
 	$content = apply_filters('the_content',$content); 
 	$job_title = get_field('team_title',$post_id); 
 	$photo = get_field('team_photo',$post_id);
+	$phone_number = get_field('phone_number',$post_id);
+	$email_address = get_field('email_address',$post_id);
+	$address = get_field('address',$post_id);
+	$has_info = ($photo || $phone_number || $email_address || $address) ? true : false;
 	ob_start(); ?>
 	<div id="staffDetails" class="popup_wrapper">
 		<div class="popupbg"></div>
 		<div class="details clear animated fadeIn">
-			<a id="closePopup"><span>x</span></a>
+			<a id="closePopup" style="display:none;"><span>x</span></a>
 			<div class="inner clear">
 				<div class="contentwrap clear">
-					<header class="titlediv">
-						<h2 class="ptitle"><?php echo $post_title;?></h2>
-						<div class="jobtitle"><?php echo $job_title;?></div>
-					</header>
-					<?php if($photo) { ?>
-					<img class="featured-image" src="<?php echo $photo['url']?>" alt="<?php echo $photo['title']?>" />
+					<div class="textcontent <?php echo ($has_info) ? 'half':'full';?>">
+						<header class="titlediv">
+							<h2 class="ptitle"><?php echo $post_title;?></h2>
+							<div class="jobtitle"><?php echo $job_title;?></div>
+						</header>
+						<?php echo $content;?>
+					</div>
+					<?php if($has_info) { ?>
+						<div class="imageContainer">
+							<?php if($photo) { ?>
+							<img class="featured-image" src="<?php echo $photo['url']?>" alt="<?php echo $photo['title']?>" />
+							<?php } ?>
+
+							<div class="contact-details clear">
+								<?php if($phone_number) { ?>
+									<div class="phone"><span class="label"><i class="fa fa-phone"></i></span><span class="value"><a href="tel:<?php echo format_phone_number($phone_number);?>"><?php echo $phone_number;?></a></span></div>
+								<?php } ?>
+
+								<?php if($email_address) { ?>
+									<div class="email"><span class="label"><i class="fa fa-envelope"></i></span><span class="value"><a href="mailto:<?php echo $email_address;?>"><?php echo $email_address;?></a></span></div>
+								<?php } ?>
+
+								<?php if($address) { ?>
+									<div class="address"><span class="label"><i class="fa fa-map-marker-alt"></i></span><span class="value"><?php echo $address;?></span></div>
+								<?php } ?>
+							</div>
+						</div>
 					<?php } ?>
-					<?php echo $content;?>
 				</div>
 			</div>
 		</div>
@@ -77,6 +101,13 @@ function get_staff_info_html($obj) {
 	$content = ob_get_contents();
 	ob_end_clean();
 	return $content;
+}
+
+function format_phone_number($string) {
+	$string = trim($string);
+	$string = preg_replace('/\s+/','',$string);
+	$string = preg_replace('@[^0-9a-z\+]+@i', '', $string);
+	return $string;
 }
 
 function get_page_id_by_template($fileName) {
