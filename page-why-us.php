@@ -43,6 +43,12 @@ $banner = get_field('banner_image'); ?>
 						'button_label' => '',
 						'button_link'	=> ''
 					);
+			$items[] = array(
+						'title' => get_field('section_4_title'),
+						'content' => get_field('section_4_text'),
+						'button_label' => '',
+						'button_link'	=> ''
+					);
 			?>
 			<div class="about-texts why-us clear">
 				<?php foreach($items as $row) { 

@@ -889,7 +889,7 @@ body.modal-open {
 	top: 0;
 	left: 0;
 	z-index: 20000;
-  	padding: 20px 30px;
+  	padding: 20px;
   	@media screen and (min-width: $tabwidth) {
   		padding: 4% 20px 4%;
   	}
@@ -930,6 +930,35 @@ body.modal-open {
 		background: #FFF;
 		padding: 30px;
 	}
+	#closePopup {
+		position: absolute;
+		top: -9px;
+    	right: -13px;
+		display: block;
+		width: 31px;
+		height: 31px;
+		text-align: center;
+		color: #FFF;
+		text-decoration: none;
+		border-radius: 100px;
+		z-index: 20;
+		background: #272727;
+		cursor: pointer;
+		border: 1px solid #FFF;
+		span {
+			position: relative;
+			font-size: 18px;
+			top: 0;
+			left: 1px;
+		}
+		@media screen and (min-width: $tabwidth) {
+			display: none;
+		}
+	}
+	
+}
+
+.staff_information {
 	.titlediv {
 		display: inline-block;
 		margin: 0 0 30px;
@@ -944,28 +973,6 @@ body.modal-open {
 		.jobtitle {
 			font-weight: 500;
 			font-size: 18px;
-		}
-	}
-	#closePopup {
-		position: absolute;
-		top: -15px;
-		right: -15px;
-		display: block;
-		width: 30px;
-		height: 30px;
-		text-align: center;
-		color: #FFF;
-		text-decoration: none;
-		border-radius: 100px;
-		z-index: 20;
-		background: #272727;
-		cursor: pointer;
-		border: 1px solid #FFF;
-		span {
-			position: relative;
-			font-size: 17px;
-			top: 1px;
-			left: 1px;
 		}
 	}
 	.textcontent.half {
@@ -1415,7 +1422,7 @@ body.modal-open {
 .content-sidebar {
 	margin-bottom: 30px;
 	@media screen and (min-width: $tabwidth) {
-		width: 67%;
+		width: 66%;
 		float: left;
 		margin-bottom: 0;
 	}
@@ -1619,5 +1626,11 @@ body.modal-open {
 		li:first-child {
 			margin-top: 0;
 		}
+	}
+}
+
+.staff-Details {
+	.imageContainer {
+
 	}
 }

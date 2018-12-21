@@ -63,10 +63,10 @@ function get_staff_info_html($obj) {
 	$address = get_field('address',$post_id);
 	$has_info = ($photo || $phone_number || $email_address || $address) ? true : false;
 	ob_start(); ?>
-	<div id="staffDetails" class="popup_wrapper">
+	<div id="staffDetails" class="popup_wrapper staff_information">
 		<div class="popupbg"></div>
 		<div class="details clear animated fadeIn">
-			<a id="closePopup" style="display:none;"><span>x</span></a>
+			<a id="closePopup"><span>x</span></a>
 			<div class="inner clear">
 				<div class="contentwrap clear">
 					<div class="textcontent <?php echo ($has_info) ? 'half':'full';?>">
