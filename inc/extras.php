@@ -74,10 +74,33 @@ function get_staff_info_html($obj) {
 							<h2 class="ptitle"><?php echo $post_title;?></h2>
 							<div class="jobtitle"><?php echo $job_title;?></div>
 						</header>
+
+						<?php if($has_info) { ?>
+							<div class="imageContainer small-screen">
+								<?php if($photo) { ?>
+								<img class="featured-image" src="<?php echo $photo['url']?>" alt="<?php echo $photo['title']?>" />
+								<?php } ?>
+
+								<div class="contact-details clear">
+									<?php if($phone_number) { ?>
+										<div class="phone"><span class="label"><i class="fa fa-phone"></i></span><span class="value"><a href="tel:<?php echo format_phone_number($phone_number);?>"><?php echo $phone_number;?></a></span></div>
+									<?php } ?>
+
+									<?php if($email_address) { ?>
+										<div class="email"><span class="label"><i class="fa fa-envelope"></i></span><span class="value"><a href="mailto:<?php echo $email_address;?>"><?php echo $email_address;?></a></span></div>
+									<?php } ?>
+
+									<?php if($address) { ?>
+										<div class="address"><span class="label"><i class="fa fa-map-marker-alt"></i></span><span class="value"><?php echo $address;?></span></div>
+									<?php } ?>
+								</div>
+							</div>
+						<?php } ?>
+
 						<?php echo $content;?>
 					</div>
 					<?php if($has_info) { ?>
-						<div class="imageContainer">
+						<div class="imageContainer large-screen">
 							<?php if($photo) { ?>
 							<img class="featured-image" src="<?php echo $photo['url']?>" alt="<?php echo $photo['title']?>" />
 							<?php } ?>

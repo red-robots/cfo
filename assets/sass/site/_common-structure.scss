@@ -10,8 +10,10 @@
 	hyphens: none;
 	page-break-inside: avoid;
 }
-form * {
+* {
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
 html {
 	margin: 0 0;
@@ -191,15 +193,6 @@ body.scrolled {
 				background: transparent;
 				box-shadow: none;
 			}
-		}
-	}
-}
-
-body.admin-bar {
-	#masthead {
-		top: 46px;
-		@media screen and (min-width: $tabwidth) {
-			top: 0;
 		}
 	}
 }

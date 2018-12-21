@@ -23,4 +23,19 @@ if( is_front_page() ) {
 	<?php } ?>
 
 	<?php endif; ?>
+<?php } else { ?>
+
+	<?php $post_type = get_post_type(); 
+	if($post_type=='page') { 
+		$banner = get_field('banner_image');
+		if($banner) { ?>
+			<div class="subpage-banner">
+				<img class="banner-image" src="<?php echo $banner['url']?>" alt="" />
+				<div class="titlediv">
+					<h1 class="page-title full-wrapper"><span><?php echo get_the_title();?></span></h1>
+				</div>
+			</div>
+		<?php } ?>
+	<?php } ?>
+
 <?php } ?>

@@ -133,7 +133,7 @@
 		padding-right: 30px;
 		top: 65%;
 		transform: translateY(-65%);
-		padding-right: 20px;
+		padding-right: 70px;
 		padding-left: 0;
 		text-align: right;
 	}
@@ -289,8 +289,10 @@
 }
 .three-boxes {
 	margin-top: 20px;
+	position: relative;
 	@media screen and (min-width: $tabwidth) {
 		margin-top: 50px;
+		top: -15px;
 	}
 	.row {
 		@media screen and (min-width: $tabwidth) {
@@ -415,10 +417,10 @@
 
 	.desc {
 		display: block;
-		margin-top: 25px;
+		margin-top: 20px;
 		font-family: $font-ProximaNova;
 		font-weight: 500;
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 1.2;
 		color: $color-theme;
 		text-align: center;
@@ -427,16 +429,14 @@
 		hyphens: none;
 		@include transition(all ease-out .2s);
 		@media screen and (min-width: $tabwidth) {
-			padding-right: 30px;
-			padding-left: 30px;
+			padding-right: 20px;
+			padding-left: 20px;
 			visibility: hidden;
-			display: none;
 		}
 	}
 	.desc.show {
 		visibility: visible;
 		animation-duration: .5s;
-		display: block;
 		padding-bottom: 0;
 		@media screen and (min-width: $tabwidth) {
 			padding-bottom: 0;
@@ -452,7 +452,7 @@
 	}
 }
 .home #primary {
-	padding-bottom: 70px;
+	padding-bottom: 10px;
 }
 .site-footer {
 	background-color: #878180;
@@ -567,7 +567,7 @@
 			margin: 0 0 20px;
 			text-align: right;
 			color: #FFF;
-			font-size: 35px;
+			font-size: 30px;
     		font-weight: 500;
     		line-height: 1;
     		@media screen and (min-width: $tabwidth) {
@@ -614,6 +614,9 @@
 .about-texts {
 	margin-top: 0;
 	margin-bottom: 70px;
+	&.why-us {
+		margin-bottom: 20px;
+	}
 	.textwrap {
 		margin-top: 40px;
 		border-bottom: 2px solid $color-gold;
@@ -745,14 +748,15 @@
 	.title1 {
 		margin: 0 0;
 		font-family: $font-BemboStd;
-		font-size: 40px;
+		font-size: 38px;
 		font-weight: normal;
-    	letter-spacing: 2px;
+    	letter-spacing: 1px;
     	line-height: 1.2;
+    	text-transform: uppercase;
 	}
 	.title2 {
 		margin: 0 0 25px;
-		font-size: 18px;
+		font-size: 20px;
 	}
 	.pad {
 		padding:32px 30px 35px;
@@ -782,23 +786,23 @@
 			@include flexbox-align-items(stretch);
 			@include flexbox-direction(row);
 			@include flexbox-wrap(wrap);
+			margin-left: -10px;
+			margin-right: -10px;
 		}
 	}
 	.team {
-		box-sizing: border-box;
-		margin-bottom: 40px;
+		margin-bottom: 21px;
 		width: 100%;
 		padding-left: 30px;
 		padding-right: 30px;
 		cursor: pointer;
 		@media screen and (min-width: $tabwidth) {
-			width: 50%;
+			width: 49.5%;
 			padding-left: 10px;
 			padding-right: 10px;
-			margin-bottom: 40px;
 		}
 		@media screen and (min-width: $midwidth) {
-			width: 25%;
+			width: 33.29%;
 		}
 	}
 	.inside {
@@ -830,9 +834,6 @@
 		@media screen and (min-width: $tabwidth) {
 			height: 98px;
 			padding:13px 10px;
-		}
-		@media screen and (min-width: $midwidth) {
-			height: 116px;
 		}
 	}
 	.info h3 {
@@ -878,16 +879,6 @@
 		}
 	}
 }
-body.is_safari .team-list {
-	.team {
-		@media screen and (min-width: $tabwidth) {
-			width: 49%;
-		}
-		@media screen and (min-width: $midwidth) {
-			width: 24%;
-		}
-	}
-}
 body.modal-open {
 	overflow: hidden;
 }
@@ -898,7 +889,7 @@ body.modal-open {
 	top: 0;
 	left: 0;
 	z-index: 20000;
-  	padding: 20px 20px;
+  	padding: 20px 30px;
   	@media screen and (min-width: $tabwidth) {
   		padding: 4% 20px 4%;
   	}
@@ -984,10 +975,26 @@ body.modal-open {
 		}
 	}
 	.imageContainer {
+		&.large-screen {
+			display: none;
+		}
+		&.small-screen {
+			display: block;
+			margin-bottom: 35px;
+			width: 100%;
+			float: left;
+		}
 		@media screen and (min-width: $tabwidth) {
 			width: 30%;
 			float: right;
+			&.small-screen {
+				display: none;
+			}
+			&.large-screen {
+				display: block;
+			}
 		}
+
 	}
 	.featured-image {
 		border:1px solid #e1e1e1;
@@ -1313,11 +1320,11 @@ body.modal-open {
 		width: 100%;
 		margin-bottom: 30px;
 		@media screen and (min-width: $tabwidth) {
-			width: 50%;
+			width: 49.5%;
 			margin-bottom: 30px;
 		}
 		@media screen and (min-width: $midwidth) {
-			width: 33.33333%;
+			width: 33.29%;
 		}
 		.inner-pad {
 			padding-left: 15px;
@@ -1508,11 +1515,109 @@ body.modal-open {
 	}
 }
 .single-post #primary.has-banner {
-	padding-top: 10px;
+	padding-top: 40px;
 	.breadcrumb {
 		margin-bottom: 20px;
 	}
 	.sidebar.right {
 		margin-top: 22px;
+	}
+}
+.post-banner {
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 180px;
+	@media screen and (min-width: $tabwidth) {
+		height: 350px;
+	}
+	@media screen and (min-width: $midwidth) {
+		height: 440px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		height: 460px;
+	}
+}
+
+.values-section {
+	margin-bottom: 70px;
+	margin-top: 30px;
+	position: relative;
+	@media screen and (min-width: $tabwidth) {
+		@include flexbox();
+		@include flexbox-align-content(center);
+		@include flexbox-align-items(center);
+		@include flexbox-direction(row);
+		@include flexbox-wrap(wrap);
+		&:before {
+			content:"";
+			display: block;
+			width: 30%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			background: $color-gold;
+		}
+		&:after {
+			content:"";
+			display: block;
+			width: 70%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-top: 1px solid $color-theme;
+			border-bottom: 1px solid $color-theme;
+		}
+	}
+	.description,.values {
+		position: relative;
+		z-index: 5;
+	}
+	.description {
+		border-top: 1px solid $color-theme;
+		border-bottom: 1px solid $color-theme;
+		font-family: $font-BemboStd;
+		font-size: 25px;
+		line-height: 1.4;
+		@media screen and (min-width: $tabwidth) {
+			width: 70%;
+			border-top: none;
+			border-bottom: none;
+		}
+		p {
+			margin-top: 0;
+			margin-bottom: 1.5em;
+		}
+		p:first-child {
+			margin-bottom: 0;
+		}
+		.inside {
+			padding:40px 40px 40px 0;
+		}
+	}
+	.values {
+		background: $color-gold;
+		color: #FFF;
+		@media screen and (min-width: $tabwidth) {
+			width: 30%;
+		}
+		ul {
+			margin: 0 0;
+			padding: 30px 28px;
+			list-style: none;
+		}
+		li {
+			font-size: 20px;
+			margin-top: 4px;
+			@media screen and (min-width: $tabwidth) {
+				font-size: 24px;
+			}
+		}
+		li:first-child {
+			margin-top: 0;
+		}
 	}
 }

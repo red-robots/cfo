@@ -4,15 +4,7 @@
  */
 
 get_header(); 
-$banner = get_field('banner_image');
-if($banner) { ?>
-<div class="subpage-banner">
-	<img class="banner-image" src="<?php echo $banner['url']?>" alt="" />
-	<div class="titlediv">
-		<h1 class="page-title full-wrapper"><span><?php echo get_the_title();?></span></h1>
-	</div>
-</div>
-<?php } ?>
+$banner = get_field('banner_image'); ?>
 
 <div id="primary" class="full-content-area clear contact-content">
 	<main id="main" class="site-main mid-wrapper clear" role="main">

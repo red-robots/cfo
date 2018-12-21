@@ -4,15 +4,7 @@
  */
 
 get_header(); 
-$banner = get_field('banner_image');
-if($banner) { ?>
-<div class="subpage-banner">
-	<img class="banner-image" src="<?php echo $banner['url']?>" alt="" />
-	<div class="titlediv">
-		<h1 class="page-title full-wrapper"><span><?php echo get_the_title();?></span></h1>
-	</div>
-</div>
-<?php } ?>
+$banner = get_field('banner_image'); ?>
 
 <div id="primary" class="full-content-area clear">
 	<main id="main" class="site-main mid-wrapper clear" role="main">
@@ -49,7 +41,7 @@ if($banner) { ?>
 				<?php if($login_title1 && $login_link1) { ?>
 					<div class="login-btn login1">
 						<div class="inside clear">
-							<a href="<?php echo $login_link1;?>">
+							<a href="<?php echo $login_link1;?>" target="_blank">
 								<?php echo $login_title1;?>
 								<span class="icon"><i class="fa fa-chevron-right"></i></span>
 							</a>
@@ -59,7 +51,7 @@ if($banner) { ?>
 				<?php if($login_title2 && $login_link2) { ?>
 					<div class="login-btn login2">
 						<div class="inside clear">
-							<a href="<?php echo $login_link2;?>">
+							<a href="<?php echo $login_link2;?>" target="_blank">
 								<?php echo $login_title2;?>
 								<span class="icon"><i class="fa fa-chevron-right"></i></span>
 							</a>
