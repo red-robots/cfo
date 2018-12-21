@@ -59,6 +59,9 @@ $banner = get_field('banner_image'); ?>
 					$parts = explode(' ',trim($str));
 					$count_str = count($parts);
 					$offset = ceil($count_str/2);
+					// if($count_str==3){
+					// 	$offset = 1;
+					// }
 					$row_title = '<span>';
 					$i=1; foreach($parts as $a) {
 						$comma = ($i>1) ? ' ' : '';
