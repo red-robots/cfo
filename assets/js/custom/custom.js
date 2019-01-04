@@ -174,5 +174,16 @@ jQuery(document).ready(function ($) {
 		});
 	});
 
+	$(document).keyup(function(e) {
+	    if (e.key === "Escape") { // escape key maps to keycode `27`
+			if( $(".popup_wrapper").length>0 ) {
+				$('body').removeClass('modal-open');
+				$(".popup_wrapper").fadeOut("fast",function(){
+					$(this).remove();
+				});
+			}
+	    }
+	});
+
 
 });// END #####################################    END

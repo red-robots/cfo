@@ -250,10 +250,10 @@
 	.description {
 		padding-top: 10px;
 		line-height: 1.5;
-		font-size: 18px;
+		font-size: 28px;
 		font-weight: normal;
 		@media screen and (min-width: $midwidth) {
-			font-size: 20px;
+			font-size: 40px;
 		}
 		p {
 			margin-top: 0;
@@ -664,13 +664,13 @@
 		}
 		.pad {
 			font-size: 15px;
-			@media screen and (min-width: $midwidth) {
-				padding-right: 28%;
-			}
+		}
+		p:first-child {
+			margin-top: 0;
 		}
 		p {
-			margin-top: 0;
-			margin-bottom: 1em;
+			margin-top: 1em;
+			margin-bottom: 0;
 		}
 	}
 	.row-title {
@@ -903,7 +903,7 @@ body.modal-open {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background:rgba(0,0,0,.5);
+		background:rgba(0,0,0,.9);
 	}
 	.details {
 		max-width: 1000px;
@@ -1311,6 +1311,7 @@ body.modal-open {
 }
 .category-list {
 	margin-top: -8px;
+	padding-bottom: 50px;
 	.the-posts {
 		@include flexbox();
 		@include flexbox-align-content(center);
@@ -1320,7 +1321,7 @@ body.modal-open {
 		margin-left: -15px;
 		margin-right: -15px;
 		padding-top: 70px;
-		padding-bottom: 40px;
+		padding-bottom: 15px;
 	}
 	.post-entry {
 		display: inline-block;
@@ -1629,8 +1630,28 @@ body.modal-open {
 	}
 }
 
-.staff-Details {
-	.imageContainer {
-
+#pagination {
+	a,span {
+		display: inline-block;
+		width: 30px;
+	    height: 30px;
+	    line-height: 29px;
+	   	font-size: 14px;
+		border:1px solid transparent;
+		text-align: center;
+		text-decoration: none;
+		@include transition(all ease-out .3s);
+	}
+	span {
+		border:1px solid $color-theme;
+		background: #FFF;
+		color: $color-theme;
+	}
+	a {
+		background: $color-theme;
+		color: #FFF;
+		&:hover {
+			background: $color-dark-teal;
+		}
 	}
 }

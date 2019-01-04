@@ -193,3 +193,9 @@ function shortenText($str, $limit, $brChar = ' ', $pad = '...')  {
     return $output;
 }
 
+function add_query_vars_filter( $vars ) {
+  $vars[] = "pg";
+  return $vars;
+}
+add_filter( 'query_vars', 'add_query_vars_filter' );
+
