@@ -67,7 +67,7 @@ $banner = get_field('banner_image'); ?>
 					<div class="text">
 						<div class="pad">
 							<?php echo $content; ?>
-							<div class="button">
+							<div class="button reverse-button">
 								<a class="btn xs" href="<?php the_permalink();?>">Learn More</a>
 							</div>
 						</div>

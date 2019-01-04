@@ -695,6 +695,7 @@
 	}
 	.button {
 		text-align: center;
+		margin-top: 15px;
 		@media screen and (min-width: $tabwidth) {
 			text-align: left;
 		}
@@ -1653,5 +1654,12 @@ body.modal-open {
 		&:hover {
 			background: $color-dark-teal;
 		}
+	}
+}
+
+.reverse-button .btn {
+	background: $color-dark-teal;
+	&:hover {
+		background: $color-theme;
 	}
 }

@@ -2059,7 +2059,7 @@ body.scrolled.home #masthead{background:#143448;box-shadow:0 2px 12px 0 rgba(0,0
 @media screen and (min-width:700px){.about-texts .row-title{text-align:right}
 }.about-texts .row-title span{color:#3b505a}
 @media screen and (min-width:700px){.about-texts .row-title span{display:block;width:100%}
-}.about-texts .button{text-align:center}
+}.about-texts .button{text-align:center;margin-top:15px}
 @media screen and (min-width:700px){.about-texts .button{text-align:left}
 }.section4-title{background:url("images/text-bg.png");background-color:#1a273a;background-position:center center;background-repeat:no-repeat;background-size:cover}
 .section4-title .mid-wrapper{margin:0 auto;padding-top:40px;padding-bottom:20px}
@@ -2237,6 +2237,8 @@ body.modal-open{overflow:hidden}
 #pagination span{border:1px solid #3b505a;background:#FFF;color:#3b505a}
 #pagination a{background:#3b505a;color:#FFF}
 #pagination a:hover{background:#98b2bf}
+.reverse-button .btn{background:#98b2bf}
+.reverse-button .btn:hover{background:#3b505a}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
