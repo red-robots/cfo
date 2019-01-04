@@ -7720,17 +7720,17 @@ body.scrolled.home #masthead {
     color: #3b505a; }
     @media screen and (min-width: 980px) {
       .about-info .title {
-        font-size: 46px; } }
+        font-size: 40px; } }
     .about-info .title p {
       margin: 0 0; }
   .about-info .description {
     padding-top: 10px;
     line-height: 1.5;
-    font-size: 28px;
+    font-size: 18px;
     font-weight: normal; }
     @media screen and (min-width: 980px) {
       .about-info .description {
-        font-size: 40px; } }
+        font-size: 28px; } }
     .about-info .description p {
       margin-top: 0;
       margin-bottom: 1em; }

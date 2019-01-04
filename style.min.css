@@ -1975,10 +1975,10 @@ body.scrolled.home #masthead{background:#143448;box-shadow:0 2px 12px 0 rgba(0,0
 @media screen and (min-width:700px){.about-info .titlediv{padding-left:6%;padding-right:6%}
 }.about-info .titlediv p{-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}
 .about-info .title{font-family:"BemboStd","Georgia",serif;font-size:35px;color:#3b505a}
-@media screen and (min-width:980px){.about-info .title{font-size:46px}
+@media screen and (min-width:980px){.about-info .title{font-size:40px}
 }.about-info .title p{margin:0}
-.about-info .description{padding-top:10px;line-height:1.5;font-size:28px;font-weight:normal}
-@media screen and (min-width:980px){.about-info .description{font-size:40px}
+.about-info .description{padding-top:10px;line-height:1.5;font-size:18px;font-weight:normal}
+@media screen and (min-width:980px){.about-info .description{font-size:28px}
 }.about-info .description p{margin-top:0;margin-bottom:1em}
 .about-info .photodiv{width:300px;margin:0 auto}
 @media screen and (min-width:700px){.about-info .photodiv{width:28%;float:left;margin:0}
