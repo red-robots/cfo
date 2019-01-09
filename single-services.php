@@ -101,19 +101,26 @@ if($banner) { ?>
 
 
 			<?php 
-				$row_3_content = get_field('row_3_content'); 
+				$row_3_title = get_field('row_3_title'); 
 				$row_3_bg = get_field('row_3_bg_image'); 
 				$row3BgStyle = '';
 				if($row_3_bg) {
 					$row3BgStyle = ' style="background-image:url('.$row_3_bg['url'].')"';
 				}
+				$row_3_content = get_field('row_3_content'); 
 			?>
 
-			<?php if($row_3_content) { ?>
+			<?php if($row_3_title) { ?>
 				<div class="divBgImg clear"<?php echo $row3BgStyle;?>>
 					<div class="mid-wrapper clear">
-						<div class="title2"><?php echo $row_3_content;?></div>
+						<div class="title2"><?php echo $row_3_title;?></div>
 					</div>
+				</div>
+			<?php } ?>
+
+			<?php if($row_3_content) { ?>
+				<div class="mid-wrapper bottomtext clear">
+					<?php echo $row_3_content;?>
 				</div>
 			<?php } ?>
 

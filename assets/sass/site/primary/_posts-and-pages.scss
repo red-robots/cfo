@@ -1720,7 +1720,9 @@ body.modal-open {
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-color: #134553;
 	background-attachment: scroll;
+	color: #FFF;
 	padding-top: 30px;
 	padding-bottom: 20px;
 }
@@ -1761,9 +1763,9 @@ body.modal-open {
 	}
 	.title {
 		margin: 0 0;
-		font-size: 20px;
+		font-size: 22px;
 		font-weight: 600;
-		line-height: 1;
+		line-height: 1.2;
 		color: $color-theme;
 		padding-bottom: 5px;
 		margin-bottom: 15px;
@@ -1781,4 +1783,13 @@ body.modal-open {
 		margin-top: 0;
 		margin-bottom: 1.5em;
 	}
+}
+.bottomtext {
+	margin-bottom: 20px;
+	position: relative;
+	top: -20px;
+}
+.bottomtext p {
+	margin-top: 0;
+	margin-bottom: 1.5em;
 }
