@@ -24,7 +24,7 @@ if($banner) { ?>
 			<?php if(get_the_content()) { ?>
 			<div class="mid-wrapper clear">
 				<div class="entry-content">
-					<?php the_content();?>
+					<?php //the_content();?>
 				</div>
 			</div>
 			<?php } ?>
