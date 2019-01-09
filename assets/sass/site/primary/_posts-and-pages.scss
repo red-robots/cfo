@@ -1746,12 +1746,14 @@ body.modal-open {
 		@include flexbox();
 		@include flexbox-wrap(wrap);
 		@include flexbox-direction(row);
-		@include flexbox-align-content(top);
+		@include flexbox-align-content(stretch);
+		@include flexbox-align-items(bottom);
 		margin-left: -20px;
 		margin-right: -20px;
 	}
 	.group {
-		margin-bottom: 25px;
+		margin-bottom: 30px;
+		position: relative;
 		@media screen and (min-width: $tabwidth) {
 			width: 50%;
 			float: left;
@@ -1768,7 +1770,6 @@ body.modal-open {
 		line-height: 1.2;
 		color: $color-theme;
 		padding-bottom: 5px;
-		margin-bottom: 15px;
 		border-bottom: 2px solid $color-gold;
 	}
 	.title b {
@@ -1779,15 +1780,30 @@ body.modal-open {
 		display: inline-block;
 		margin-right: 8px;
 	}
+	.text {
+		margin-top: 20px;
+	}
 	.text p {
 		margin-top: 0;
 		margin-bottom: 1.5em;
 	}
+
+	&.full .group {
+		@media screen and (min-width: $tabwidth) {
+			width: 100%;
+			float: left;
+		}
+	}
+	&.threeCol .group {
+		@media screen and (min-width: $tabwidth) {
+
+		}
+	}
 }
 .bottomtext {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	position: relative;
-	top: -20px;
+	top: -10px;
 }
 .bottomtext p {
 	margin-top: 0;

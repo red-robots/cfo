@@ -77,8 +77,17 @@ if($banner) { ?>
 				</div>
 			<?php } ?>
 
-			<?php if($row_2_contents) { ?>
-				<div class="mid-wrapper row2content clear">
+			<?php if($row_2_contents) { 
+				$total_rows = count($row_2_contents); 
+				$divClass = 'twoCol';
+				if($total_rows==1) {
+					$divClass = 'full';
+				}
+				elseif($total_rows==3) {
+					$divClass = 'threeCol';
+				}
+				?>
+				<div class="mid-wrapper row2content clear <?php echo $divClass;?>">
 					<div class="row clear">
 					<?php foreach($row_2_contents as $rc) { 
 						$title2 = $rc['title'];
