@@ -40,24 +40,7 @@ $banner = get_field('banner_image'); ?>
 			<?php while ( $items->have_posts() ) : $items->the_post(); 
 				$post_id = get_the_ID();
 				$post_title = get_the_title();
-				$parts = explode(' ',trim($post_title));
-				$count_str = count($parts);
-				$offset = ceil($count_str/2);
-				$row_title = '<span>';
-				$i=1; foreach($parts as $a) {
-					$comma = ($i>1) ? ' ' : '';
-					if($i<=$offset) {
-						$row_title .= $comma . $a;
-						if($i==$offset) {
-							$row_title .= '</span>';
-						}
-					} else {
-						$row_title .= $comma . $a;
-					}
-					$i++;
-				}
-				$row_title = trim($row_title);
-				$row_title = preg_replace('/\s+/', ' ', $row_title);
+				$row_title = title_formatter($post_title);
 				$content = get_field('short_description',$post_id);
 				?>
 				<div class="textwrap clear">

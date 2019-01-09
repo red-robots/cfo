@@ -56,26 +56,7 @@ $banner = get_field('banner_image'); ?>
 					$button_label = $row['button_label'];
 					$button_link = $row['button_link'];
 					$str = $row['title'];
-					$parts = explode(' ',trim($str));
-					$count_str = count($parts);
-					$offset = ceil($count_str/2);
-					// if($count_str==3){
-					// 	$offset = 1;
-					// }
-					$row_title = '<span>';
-					$i=1; foreach($parts as $a) {
-						$comma = ($i>1) ? ' ' : '';
-						if($i<=$offset) {
-							$row_title .= $comma . $a;
-							if($i==$offset) {
-								$row_title .= '</span>';
-							}
-						} else {
-							$row_title .= $comma . $a;
-						}
-						$i++;
-					}
-					$row_title = trim($row_title);
+					$row_title = title_formatter($str);
 					$row_title = preg_replace('/\s+/', ' ', $row_title);
 					?>
 					<div class="textwrap clear">

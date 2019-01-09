@@ -180,6 +180,31 @@ function get_posts_by_categories($taxonomy='category',$numberPost=3) {
     return $records;
 }
 
+function title_formatter($string) {
+	if($string) {
+		$parts = explode(' ',trim($string));
+		$count_str = count($parts);
+		$offset = ceil($count_str/2);
+		$row_title = '<span>';
+		$i=1; foreach($parts as $a) {
+			$comma = ($i>1) ? ' ' : '';
+			if($i<=$offset) {
+				$row_title .= $comma . $a;
+				if($i==$offset) {
+					$row_title .= '</span>';
+				}
+			} else {
+				$row_title .= $comma . $a;
+			}
+			$i++;
+		}
+		$row_title = trim($row_title);
+		$row_title = preg_replace('/\s+/', ' ', $row_title);
+	} else {
+		$row_title = '';
+	}
+	return $row_title;
+}
 
 function shortenText($str, $limit, $brChar = ' ', $pad = '...')  {
     if (empty($str) || strlen($str) <= $limit) {

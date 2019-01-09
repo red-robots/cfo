@@ -1663,3 +1663,122 @@ body.modal-open {
 		background: $color-theme;
 	}
 }
+.contentrow {
+	margin-left: -20px;
+	margin-right: -20px; 
+	margin-top: 30px;
+	padding-bottom: 20px;
+}
+.contentrow .textwrap {
+	margin-bottom: 30px;
+	&.columned .col {
+		@media screen and (min-width: $tabwidth) {
+			width: 50%;
+			float: left;
+		}
+	}
+	.pad {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.contentdiv p {
+		margin-top: 0;
+		margin-bottom: 1.5em;
+	}
+	.titlediv {
+		text-align: left;
+		@media screen and (min-width: $tabwidth) {
+			text-align: right;
+		}
+	}
+	.row-title {
+		display: block;
+		margin: 0 0 20px 0;
+		text-transform: uppercase;
+		font-family: $font-BemboStd;
+		font-size: 35px;
+		font-weight: 400;
+		line-height: 1;
+		color: $color-dark-teal;
+		padding-bottom: 15px;
+		padding-top: 5px;
+		border-bottom: 2px solid $color-gold;
+		@media screen and (min-width: $tabwidth) {
+			margin-bottom: 0;
+		}
+		span {
+			display: inline-block;
+			color: $color-theme;
+			@media screen and (min-width: $tabwidth) {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+}
+.divBgImg {
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: scroll;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+.divBgImg .title2 {
+	font-family: $font-BemboStd;
+	font-size: 35px;
+	font-weight: 400;
+	line-height: 1;
+	text-transform: uppercase;
+	color: #FFF;
+	text-align: center;
+	@media screen and (min-width: $tabwidth) {
+		width: 85%;
+		margin: 0 auto;
+	}
+}
+.row2content {
+	padding-top: 60px;
+	padding-bottom: 20px;
+	.row {
+		@include flexbox();
+		@include flexbox-wrap(wrap);
+		@include flexbox-direction(row);
+		@include flexbox-align-content(top);
+		margin-left: -20px;
+		margin-right: -20px;
+	}
+	.group {
+		margin-bottom: 25px;
+		@media screen and (min-width: $tabwidth) {
+			width: 50%;
+			float: left;
+		}
+	}
+	.group .pad {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.title {
+		margin: 0 0;
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 1;
+		color: $color-theme;
+		padding-bottom: 5px;
+		margin-bottom: 15px;
+		border-bottom: 2px solid $color-gold;
+	}
+	.title b {
+		font-family: $font-BemboStd;
+		font-size: 30px;
+		font-weight: bold;
+		color: $color-gold;
+		display: inline-block;
+		margin-right: 8px;
+	}
+	.text p {
+		margin-top: 0;
+		margin-bottom: 1.5em;
+	}
+}

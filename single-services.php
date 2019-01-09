@@ -18,27 +18,106 @@ if($banner) { ?>
 	</div>
 </div>
 <?php } ?>
-	<div id="primary" class="full-content-area clear">
-		<main id="main" class="site-main mid-wrapper clear" role="main">
-			<?php while ( have_posts() ) : the_post(); ?>
-				<div class="mid-content-wrap clear text-center large-text">
-				<?php if($banner) { ?>
-					<div class="entry-content">
-						<?php the_content();?>
-					</div>
-				<?php } else { ?>
-					<header class="entry-header">
-						<h1 class="entry-title"><?php the_title();?></h1>
-					</header>
-					<div class="entry-content">
-						<?php the_content();?>
+	<div id="primary" class="full-content-area clear nopadbottom">
+		<?php while ( have_posts() ) : the_post(); ?>
+
+			<?php if(get_the_content()) { ?>
+			<div class="mid-wrapper clear">
+				<div class="entry-content">
+					<?php the_content();?>
+				</div>
+			</div>
+			<?php } ?>
+
+			<div class="mid-wrapper clear">
+				<?php $rows1 = get_field('row_1_content'); ?>
+				<?php if($rows1) { ?>
+					<div class="contentrow clear">	
+						<?php foreach($rows1 as $rr) { 
+							$title1 = $rr['title'];
+							$content1 = $rr['content'];
+							$colClass = 'full';
+							if($title1 && $content1) {
+								$colClass = 'columned';
+							}
+							else if(empty($title1) && $content1) {
+								$colClass = 'full';
+							}
+
+							$section_title = title_formatter($title1);
+							?>	
+
+							<div class="textwrap clear <?php echo $colClass?>">
+								<?php if($title1) { ?>
+								<div class="titlediv col"><div class="pad clear"><h3 class="row-title"><?php echo $section_title; ?></h3></div></div>
+								<?php } ?>
+								<?php if($content1) { ?>
+								<div class="contentdiv col"><div class="pad clear"><?php echo $content1; ?></div></div>
+								<?php } ?>
+							</div>
+						<?php } ?>
 					</div>
 				<?php } ?>
-				</div>
-			<?php endwhile; ?>
+				<?php 
+					$row_2_title = get_field('row_2_title'); 
+					$row_2_bg = get_field('row_2_bg_image'); 
+					$row_2_contents = get_field('row_2_content'); 
+					$row2BgStyle = '';
+					if($row_2_bg) {
+						$row2BgStyle = ' style="background-image:url('.$row_2_bg['url'].')"';
+					}
+				?>
+			</div>
 
-			<?php get_template_part("template-parts/services-bottom"); ?>
-		</main><!-- #main -->
+			<?php if($row_2_title) { ?>
+				<div class="divBgImg clear"<?php echo $row2BgStyle;?>>
+					<div class="mid-wrapper clear">
+						<div class="title2"><?php echo $row_2_title;?></div>
+					</div>
+				</div>
+			<?php } ?>
+
+			<?php if($row_2_contents) { ?>
+				<div class="mid-wrapper row2content clear">
+					<div class="row clear">
+					<?php foreach($row_2_contents as $rc) { 
+						$title2 = $rc['title'];
+						$content2 = $rc['content'];
+						?>
+						<div class="group">
+							<div class="pad clear">
+								<?php if($title2) { ?>
+									<h2 class="title"><?php echo $title2; ?></h2>
+								<?php } ?>
+								<?php if($content2) { ?>
+									<div class="text"><?php echo $content2; ?></div>
+								<?php } ?>
+							</div>
+						</div>
+					<?php } ?>
+					</div>
+				</div>
+			<?php } ?>
+
+
+			<?php 
+				$row_3_content = get_field('row_3_content'); 
+				$row_3_bg = get_field('row_3_bg_image'); 
+				$row3BgStyle = '';
+				if($row_3_bg) {
+					$row3BgStyle = ' style="background-image:url('.$row_3_bg['url'].')"';
+				}
+			?>
+
+			<?php if($row_3_content) { ?>
+				<div class="divBgImg clear"<?php echo $row3BgStyle;?>>
+					<div class="mid-wrapper clear">
+						<div class="title2"><?php echo $row_3_content;?></div>
+					</div>
+				</div>
+			<?php } ?>
+
+		<?php endwhile; ?>
 	</div><!-- #primary -->
 
 <?php
