@@ -21,14 +21,6 @@ if($banner) { ?>
 	<div id="primary" class="full-content-area clear nopadbottom">
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php if(get_the_content()) { ?>
-			<div class="mid-wrapper clear">
-				<div class="entry-content">
-					<?php //the_content();?>
-				</div>
-			</div>
-			<?php } ?>
-
 			<div class="mid-wrapper clear">
 				<?php $rows1 = get_field('row_1_content'); ?>
 				<?php if($rows1) { ?>
