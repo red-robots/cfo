@@ -52,7 +52,8 @@ $banner = get_field('banner_image'); ?>
 						$content = strip_tags($content);
 						$excerpt = shortenText($content,300," ");
 						$post_date = get_the_date();
-						$the_post_date = date('F Y',strtotime($post_date));		
+						$the_post_date = date('F Y',strtotime($post_date));	
+						$custom_post_date = get_field('date_subtitle');	
 						$pagelink = get_permalink(); ?>
 						<div class="post-entry">
 							<div class="inner-pad clear">
@@ -63,6 +64,9 @@ $banner = get_field('banner_image'); ?>
 									<div class="textwrap clear">
 										<header class="post-info">
 											<h3 class="post-title"><?php echo $post_title; ?></h3>
+											<?php if($custom_post_date) { ?>
+											<div class="date"><?php echo $custom_post_date; ?></div>
+											<?php } ?>
 										</header>
 										<p class="excerpt"><?php echo $excerpt; ?></p>
 										<div class="buttondiv text-center">

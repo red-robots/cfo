@@ -41,15 +41,13 @@ $banner = get_field('banner_image'); ?>
 
 				<?php if($phone_title && $phone_number) { ?>
 				<div class="row-info clear">
-					<div class="info label"><span><?php echo $phone_title; ?></span></div>
-					<div class="info value"><span><?php echo $phone_number; ?></span></div>
+					<div class="info value fullwidth"><span><?php echo $phone_number; ?></span></div>
 				</div>
 				<?php } ?>
 
 				<?php if($email_title && $email) { ?>
 				<div class="row-info clear">
-					<div class="info label"><span><?php echo $email_title; ?></span></div>
-					<div class="info value"><span><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></span></div>
+					<div class="info value fullwidth"><span><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></span></div>
 				</div>
 				<?php } ?>
 			</div>

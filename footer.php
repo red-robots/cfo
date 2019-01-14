@@ -8,6 +8,15 @@
 				wp_nav_menu( array( 'menu' => 'Footer Menu', 'menu_id' => 'footer-menu','link_before'=>'<span>','after_before'=>'<span>' ) ); 
 			?>
 			</div>
+
+			<div class="colophon">
+				<div class="inside clear">
+				<span class="copyright">&copy; <?php echo date('Y') ?> <?php echo get_bloginfo('name') ?></span>
+					<?php 
+						wp_nav_menu( array( 'menu' => 'Colophon', 'menu_id' => 'colophon-menu') ); 
+					?>
+				</div>
+			</div>
 		</div><!-- wrapper -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
