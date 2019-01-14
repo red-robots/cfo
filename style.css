@@ -7785,8 +7785,8 @@ body.scrolled.home #masthead {
   text-align: center; }
   @media screen and (min-width: 700px) {
     .about-info {
-      padding-top: 80px;
-      padding-bottom: 10px; } }
+      padding-top: 75px;
+      padding-bottom: 20px; } }
   .about-info .titlediv {
     margin: 0 0;
     line-height: 1.2;

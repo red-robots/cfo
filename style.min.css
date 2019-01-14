@@ -1989,7 +1989,7 @@ body.scrolled.home #masthead{background:#143448;box-shadow:0 2px 12px 0 rgba(0,0
 @media screen and (min-width:700px){.mid-wrapper{max-width:1000px}
 }@media screen and (min-width:1200px){.mid-wrapper{padding-left:0;padding-right:0}
 }.about-info{padding-top:40px;padding-bottom:40px;text-align:center}
-@media screen and (min-width:700px){.about-info{padding-top:80px;padding-bottom:10px}
+@media screen and (min-width:700px){.about-info{padding-top:75px;padding-bottom:20px}
 }.about-info .titlediv{margin:0;line-height:1.2;padding-left:0;padding-right:0}
 @media screen and (min-width:700px){.about-info .titlediv{padding-left:6%;padding-right:6%}
 }.about-info .titlediv p{-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}
