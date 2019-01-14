@@ -2087,9 +2087,10 @@ body.scrolled.home #masthead{background:#143448;box-shadow:0 2px 12px 0 rgba(0,0
 }.section4-content{padding-top:50px;padding-bottom:40px}
 .button .btn.xs{padding:5px 10px 3px;font-size:13px;letter-spacing:1px}
 .bottom-info{background-color:#1a273a;background-size:cover;background-position:center center;background-repeat:no-repeat;background-color:#3b505a;color:#FFF;text-align:center;margin-bottom:0}
-.bottom-info .title1{margin:0;font-family:"BemboStd","Georgia",serif;font-size:38px;font-weight:normal;letter-spacing:1px;line-height:1.2;text-transform:uppercase}
-.bottom-info .title2{margin:0 0 25px;font-size:20px}
+.bottom-info .title1{margin:0;font-family:"BemboStd","Georgia",serif;font-size:35px;font-weight:normal;letter-spacing:1px;line-height:1.2;text-transform:uppercase}
+.bottom-info .title2{margin:0 0 18px;font-size:18px}
 .bottom-info .pad{padding:32px 30px 35px}
+.bottom-info .button{margin-top:10px}
 .bottom-info .btn{display:inline-block;text-decoration:none;background:#98b2bf;text-transform:uppercase;font-size:13px;font-weight:500;line-height:13px;letter-spacing:2px;padding:6px 8px 5px;color:#FFF;-webkit-transform:.3s ease-in;-ms-transform:.3s ease-in;transform:.3s ease-in}
 .bottom-info .btn:hover{background:#928143}
 .team-list{margin:40px auto 0;width:100%;max-width:800px}
@@ -2189,7 +2190,7 @@ body.modal-open{overflow:hidden}
 .contact-info .office .link a:hover .icon{margin-right:-7px}
 .contact-bottom{background:#3b505a;color:#FFF;margin-top:60px;position:relative}
 .contact-bottom .section-title{margin-bottom:0}
-.contact-bottom .description{margin-top:5px;margin-bottom:18px}
+.contact-bottom .description{margin-top:5px;margin-bottom:18px;font-size:18px}
 .contact-bottom .buttondiv{margin-bottom:30px}
 .contact-bottom .buttondiv a{display:inline-block;text-decoration:none;background:#98b2bf;text-transform:uppercase;font-size:13px;font-weight:500;line-height:13px;letter-spacing:2px;padding:6px 8px 5px;color:#FFF;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
 .contact-bottom .buttondiv a:hover{background:#928143}

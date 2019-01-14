@@ -63,7 +63,9 @@ $banner = get_field('banner_image'); ?>
 	<div class="bottom-info clear"<?php echo $bottom_bg?>>
 		<div class="pad clear">
 			<h2 class="title1"><?php echo $bottom_title1; ?></h2>
+			<?php if($bottom_title2) { ?>
 			<p class="title2"><?php echo $bottom_title2; ?></p>
+			<?php } ?>
 			<?php if($bottom_button_label && $bottom_button_link) { ?>
 			<div class="button">
 				<a class="btn" href="<?php echo $bottom_button_link;?>"><?php echo $bottom_button_label;?></a>
