@@ -251,12 +251,9 @@ body.scrolled {
 			padding-bottom: 3px;
 			transition: all ease-out .2s;
 			@media screen and (min-width: $tabwidth) {
-				font-size: 13px;
+				font-size: 12.5px;
 			}
 			@media screen and (min-width: $midwidth) {
-				font-size: 13px;
-			}
-			@media screen and (min-width: $deskwidth) {
 				font-size: 16px;
 			}
 			span {
@@ -287,6 +284,10 @@ body.scrolled {
 		@media screen and (min-width: $tabwidth) {
 			margin-top: 0;
 		}
+		@media screen and (min-width: $deskwidth) {
+			padding-left: 11px;
+			padding-right: 11px;
+		}
 	}
 	.menu > li:first-child {
 		margin-top: 0;
@@ -296,12 +297,25 @@ body.scrolled {
 		position: relative;
 		border-bottom: 2px solid #FFF;
 		padding-bottom: 15px;
-		padding-right: 15px;
+		padding-right: 0;
 		margin-bottom: 15px;
+		min-height: 39px;
 		@media screen and (min-width: $tabwidth) {
 			padding-bottom: 10px;
 		}
-		&:after {
+		@media screen and (min-width: $midwidth) {
+			height: 39px;
+		}
+		span {
+			display: block;
+			width: 100%;
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			padding-right: 15px;
+			transition: all ease-out .2s;
+		}
+		span:after {
 			content: "\f054";
 			display: inline-block;
 			font: normal normal normal 14px/1 FontAwesome;
@@ -311,12 +325,13 @@ body.scrolled {
 			-moz-osx-font-smoothing: grayscale;
 			position: absolute;
 			right: 0;
+			margin-top: 3px;
 			transition: all ease-out .3s;
 			margin-right: 0;
 		}
 	}
 	.menu > li:hover > a {
-		&:after {
+		span:after {
 			margin-right: -5px;
 		}
 	}

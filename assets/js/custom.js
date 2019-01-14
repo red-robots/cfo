@@ -106,6 +106,7 @@ jQuery(document).ready(function ($) {
 	*
 	------------------------------------*/
 	$('.js-blocks').matchHeight();
+	$('.footer-menu-wrap .menu > li > a').matchHeight();
 
 	/*
 	*
