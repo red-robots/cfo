@@ -1908,3 +1908,26 @@ body.modal-open {
 	}
 }
 
+.post-sharer {
+	border-top: 2px solid $color-gold;
+	margin-top: 20px;
+	padding-top: 15px;
+	a {
+		display: inline-block;
+		font-size: 32px;
+		margin-right: 13px;
+	}
+	.linkedin {
+		color: #0077b5;
+	}
+	.twitter {
+		color: #1da1f2;
+	}
+	.facebook {
+		color: #4267b2;
+	}
+	.email {
+		color: #928243;
+	}
+}
+

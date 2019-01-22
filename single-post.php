@@ -51,7 +51,18 @@ $post_class ='full-content-area clear'; ?>
 						<?php the_content();?>
 					</div>
 				<?php } ?>
+
+				<div class="post-sharer clear">
+					<a class="linkedin" target="popup" data-href="https://www.linkedin.com/cws/share?url=<?php echo get_permalink(); ?>" onclick="javascript:window.open(this.dataset.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><span class="icon fab fa-linkedin"></span></a>
+					<a class="twitter" data-href="https://twitter.com/share?text=<?php echo urlencode(get_the_title()); ?>&url=<?php echo get_permalink(); ?>" rel="nofollow" onclick="javascript:window.open(this.dataset.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><span class="icon fab fa-twitter-square"></span></a>
+					<a class="facebook" target="_blank" data-href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink(); ?>" onclick="javascript:window.open(this.dataset.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><span class="icon fab fa-facebook"></span></a>
+					<a class="email" href="mailto:?subject=<?php echo get_the_title(); ?>&body=<?php echo get_permalink(); ?>"><span class="icon fas fa-envelope-square"></span></a>
+				</div>
+
 			<?php endwhile; ?>
+
+			
+
 		</main><!-- #main -->
 
 		<div class="sidebar right">
