@@ -2308,7 +2308,7 @@ body.modal-open{overflow:hidden}
 .post-listing a:hover{color:#98b2bf}
 .post-listing .date{font-size:11px;color:#928143;margin-top:3px}
 .post-sharer{border-top:2px solid #928143;margin-top:20px;padding-top:15px}
-.post-sharer a{display:inline-block;font-size:32px;margin-right:13px}
+.post-sharer a{cursor:pointer;display:inline-block;font-size:32px;margin-right:13px}
 .post-sharer .linkedin{color:#0077b5}
 .post-sharer .twitter{color:#1da1f2}
 .post-sharer .facebook{color:#4267b2}
