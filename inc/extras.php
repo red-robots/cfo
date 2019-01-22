@@ -224,3 +224,12 @@ function add_query_vars_filter( $vars ) {
 }
 add_filter( 'query_vars', 'add_query_vars_filter' );
 
+
+function latest_post_by_archives($limitNum=15) {
+	global $wpdb;
+	$query = "SELECT ID,post_title,post_date, MONTH(post_date) AS month, YEAR(post_date) AS year FROM $wpdb->posts WHERE post_type='post' AND post_status = 'publish'
+			  GROUP BY YEAR(post_date), MONTH(post_date) ORDER BY post_date DESC LIMIT " . $limitNum;
+	$result = $wpdb->get_results($query);
+	return ($result) ? $result : false;
+}
+
