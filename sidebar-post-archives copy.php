@@ -1,20 +1,12 @@
 <?php
-$args = array(
-		'posts_per_page'   => -1,
-		'orderby'          => 'date',
-		'order'            => 'DESC',
-		'post_type'        => 'post',
-		'post_status'      => 'publish'
-		);
-$posts = get_posts($args);
-if($posts) { 
-	$count_post = count($posts);
+$archives = latest_post_by_archives();
+if($archives) {
 ?>
-<div class="post-sidebar<?php echo ($count_post>20) ? ' overflow':'';?>">
+<div class="post-sidebar">
 	<div class="titlediv"><span>News &amp; Insights Archive</span></div>
 	<div class="archive-list clear">
 		<ul class="post-listing">
-		<?php $j=1; foreach($posts as $ar) {
+		<?php $j=1; foreach($archives as $ar) {
 			$post_id = $ar->ID; 
 			$post_title = $ar->post_title;
 			$post_date = $ar->post_date;

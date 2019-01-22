@@ -1880,6 +1880,11 @@ body.modal-open {
 		padding: 18px 20px 20px;
 		border-bottom: 2px solid $color-gold;
 	}
+	&.overflow .archive-list {
+		height: 985px;
+		overflow-x: hidden;
+		overflow-y: scroll;
+	}
 }
 .post-listing {
 	margin: 0 0;

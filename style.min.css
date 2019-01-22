@@ -2301,6 +2301,7 @@ body.modal-open{overflow:hidden}
 .post-sidebar{text-align:right}
 .post-sidebar .titlediv{background:#928143;color:#FFF;padding:5px 20px;font-weight:400;font-size:16px;line-height:1.3}
 .post-sidebar .archive-list{background:#e0e9ec;padding:18px 20px 20px;border-bottom:2px solid #928143}
+.post-sidebar.overflow .archive-list{height:985px;overflow-x:hidden;overflow-y:scroll}
 .post-listing{margin:0;padding:0;list-style:none;line-height:1}
 .post-listing li{margin-top:25px}
 .post-listing li.first{margin-top:0}
