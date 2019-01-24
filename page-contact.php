@@ -6,7 +6,7 @@
 get_header(); 
 $banner = get_field('banner_image'); ?>
 
-<div id="primary" class="full-content-area clear contact-content">
+<div id="primary" class="full-content-area clear">
 	<main id="main" class="site-main mid-wrapper clear" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<div class="mid-content-wrap clear text-center large-text">
@@ -108,32 +108,6 @@ $banner = get_field('banner_image'); ?>
 
 		</div>
 	</main><!-- #main -->
-
-	<?php 
-		$section_3_title = get_field('section_3_title');
-		$section_3_description = get_field('section_3_description');
-		$section_3_button_text = get_field('section_3_button_text');
-		$section_3_link = get_field('section_3_link');
-		$section_3_image = get_field('section_3_image');
-	?>
-	<div class="contact-bottom clear text-center">
-		<div class="text clear">
-		<?php if($section_3_title) { ?>
-			<h2 class="section-title"><?php echo $section_3_title; ?></h2>
-		<?php } ?>
-		<?php if($section_3_description) { ?>
-			<div class="description"><?php echo $section_3_description; ?></div>
-		<?php } ?>
-		<?php if($section_3_button_text && $section_3_link) { ?>
-			<div class="buttondiv">
-				<a href="<?php echo $section_3_link; ?>"><?php echo $section_3_button_text; ?></a>
-			</div>
-		<?php } ?>
-		</div>
-		<?php if($section_3_image) { ?>
-			<div class="bgImage" style="background-image:url('<?php echo $section_3_image['url']; ?>');"></div>
-		<?php } ?>
-	</div>
 
 </div><!-- #primary -->
 
