@@ -152,6 +152,42 @@ jQuery(document).ready(function ($) {
 		});
 	});
 
+
+	/* Pop-up Page Content */
+	var popup_pages = ['privacy-policy','terms-of-use','disclaimer'];
+	$('#colophon-menu a').on("click",function(e){
+		e.preventDefault();
+		var page_url = $(this).attr('href');
+		var slug = $(this).attr('data-slug');
+		if(slug) {
+			if($.inArray(slug, popup_pages) !== -1) {
+				$.ajax({
+					url : frontajax.ajaxurl,
+					type : 'post',
+					dataType : "json",
+					data : {
+						action : 'get_the_page_content',
+						post_name : slug
+					},
+					beforeSend:function(){
+						$(".ml-loader-wrap").show();
+					},
+					success : function( response ) {
+						if(response.content) {
+							var content = response.content;
+							$('body').append(content);
+							$('body').addClass('modal-open');
+							$(".ml-loader-wrap").hide();
+						} 
+					}
+				});
+			}
+		} else {
+			window.location.href = page_url;
+		}
+	});
+
+
 	resize_contentdiv();
 
 	$( window ).resize(function() {
@@ -167,13 +203,24 @@ jQuery(document).ready(function ($) {
 		}
 	}
 
-	$(document).on("click","#closePopup,.popupbg",function(e){
+	$(document).on("click","#closePopup",function(e){
 		e.preventDefault();
 		$('body').removeClass('modal-open');
 		$(".popup_wrapper").fadeOut("fast",function(){
 			$(this).remove();
 		});
 	});
+
+	$(document).mouseup(function(e)  {
+	    var container = $(".ajax_contentdiv");
+	    if (!container.is(e.target) && container.has(e.target).length === 0)  {
+	        $('body').removeClass('modal-open');
+			$(".popup_wrapper").fadeOut("fast",function(){
+				$(this).remove();
+			});
+	    }
+	});
+
 
 	$(document).keyup(function(e) {
 	    if (e.key === "Escape") { // escape key maps to keycode `27`
@@ -184,6 +231,20 @@ jQuery(document).ready(function ($) {
 				});
 			}
 	    }
+	});
+
+	/* Archive Pagination */
+	$(document).on("click","#archive_pagination a",function(e){
+		e.preventDefault();
+		e.preventDefault();
+    	var page_url = $(this).attr('href');
+    	window.history.replaceState( null, null, page_url );
+    	//$('.divspinner').fadeIn();
+    	setTimeout(function(){
+    		$('#js_reload').load(page_url + " .post-sidebar-content",function(){
+    			//$('.divspinner').fadeOut();
+    		});
+    	},400);
 	});
 
 

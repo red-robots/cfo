@@ -27,6 +27,7 @@ $client_login_title = get_field('client_login_title','options');
 $client_login_link = get_field('client_login_link','options');
 ?>
 <body <?php body_class($classes); ?>>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'acstarter' ); ?></a>
 

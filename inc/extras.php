@@ -68,7 +68,7 @@ function get_staff_info_html($obj) {
 		<div class="details clear animated fadeIn">
 			<a id="closePopup"><span>x</span></a>
 			<div class="inner clear">
-				<div class="contentwrap clear">
+				<div class="contentwrap clear ajax_contentdiv">
 					<div class="textcontent <?php echo ($has_info) ? 'half':'full';?>">
 						<header class="titlediv">
 							<h2 class="ptitle"><?php echo $post_title;?></h2>
@@ -127,6 +127,56 @@ function get_staff_info_html($obj) {
 	<?php
 	$content = ob_get_contents();
 	ob_end_clean();
+	return $content;
+}
+
+add_action( 'wp_ajax_nopriv_get_the_page_content', 'get_the_page_content' );
+add_action( 'wp_ajax_get_the_page_content', 'get_the_page_content' );
+function get_the_page_content() {
+	if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+		$slug = ($_POST['post_name']) ? $_POST['post_name'] : '';
+		$html = ajax_get_page_content($slug);
+		$response['content'] = $html;
+		echo json_encode($response);
+	}
+	else {
+		header("Location: ".$_SERVER["HTTP_REFERER"]);
+	}
+	die();
+}
+
+function ajax_get_page_content($slug=null) {
+	global $wpdb;
+	if(empty($slug)) return '';
+	$content = '';
+	$result = $wpdb->get_row( "SELECT * FROM {$wpdb->prefix}posts WHERE post_name='".$slug."' AND post_status = 'publish'", OBJECT );
+	if($result) { 
+		ob_start(); 
+		$page_title = $result->post_title;
+		$content = $result->post_content;
+		$page_content = apply_filters('the_content', $content);
+		?>
+
+		<div id="staffDetails" class="popup_wrapper staff_information">
+			<div class="popupbg"></div>
+			<div class="details clear animated fadeIn">
+				<a id="closePopup"><span>x</span></a>
+				<div class="inner clear">
+					<div class="contentwrap clear ajax_contentdiv">
+						<div class="textcontent full">
+							<header class="titlediv">
+								<h1 class="ptitle"><?php echo $page_title;?></h1>
+							</header>
+							<?php echo $page_content;?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<?php 
+		$content = ob_get_contents();
+		ob_end_clean();
+	}
 	return $content;
 }
 
@@ -227,9 +277,15 @@ add_filter( 'query_vars', 'add_query_vars_filter' );
 
 function latest_post_by_archives($limitNum=15) {
 	global $wpdb;
-	$query = "SELECT ID,post_title,post_date, MONTH(post_date) AS month, YEAR(post_date) AS year FROM $wpdb->posts WHERE post_type='post' AND post_status = 'publish'
+	$tableName = $wpdb->prefix.'posts';
+	$query = "SELECT ID,post_title,post_date, MONTH(post_date) AS month, YEAR(post_date) AS year FROM ".$tableName." WHERE post_type='post' AND post_status = 'publish'
 			  GROUP BY YEAR(post_date), MONTH(post_date) ORDER BY post_date DESC LIMIT " . $limitNum;
 	$result = $wpdb->get_results($query);
 	return ($result) ? $result : false;
 }
 
+function count_published_post($postTypeName='post') {
+	global $wpdb;
+	$result = $wpdb->get_row( "SELECT count(*) as total FROM {$wpdb->prefix}posts WHERE post_type='".$postTypeName."' AND post_status = 'publish'", OBJECT );
+	return ($result) ? $result->total : 0;
+}

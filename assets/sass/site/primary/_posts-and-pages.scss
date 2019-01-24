@@ -672,10 +672,10 @@
 		@media screen and (min-width: $tabwidth) {
 			width: 52%;
 			float: right;
-			top: -6px;
+			top: -8px;
 		}
 		.pad {
-			font-size: 15px;
+			font-size: 16px;
 			padding-top: 5px;
 		}
 		p:first-child {
@@ -684,7 +684,7 @@
 		p {
 			margin-top: 1em;
 			margin-bottom: 0;
-			line-height: 16.5px;
+			line-height: 1.35;
 		}
 	}
 	.row-title {
@@ -1940,6 +1940,26 @@ body.modal-open {
 	}
 	.email {
 		color: #928243;
+	}
+}
+
+.archive_pagination {
+	margin-top: 25px;
+	a, span {
+		display: inline-block;
+		font-size: 13px;
+		line-height: 15px;
+		padding: 4px 7px 2px;
+		color: $color-theme;
+		text-decoration: none;
+	}
+	a {
+		border: 1px solid $color-theme;
+	}
+	.current {
+		border: 1px solid transparent;
+		background: $color-theme;
+		color: #FFF;
 	}
 }
 

@@ -13,8 +13,24 @@
 				<div class="inside clear">
 				<span class="copyright">&copy; <?php echo date('Y') ?> <?php echo get_bloginfo('name') ?></span>
 					<?php 
-						wp_nav_menu( array( 'menu' => 'Colophon', 'menu_id' => 'colophon-menu') ); 
-					?>
+						$menus = wp_get_nav_menu_items( 'Colophon' );
+						//wp_nav_menu( array( 'menu' => 'Colophon', 'menu_id' => 'colophon-menu') ); 
+						if($menus) { ?>
+							<div class="menu-colophon-container">
+								<ul id="colophon-menu" class="menu">
+									<?php foreach($menus as $m) { 
+										$menu_title = $m->title; 
+										$menu_url = $m->url; 
+										$obj_id = $m->object_id;
+										$basename = ($obj_id) ? basename($menu_url): '';
+										?>
+										<?php if($menu_title) { ?>
+										<li><a data-slug="<?php echo $basename?>" href="<?php echo $menu_url?>"><?php echo $menu_title?></a></li>
+										<?php  } ?>	
+									<?php  } ?>	
+								</ul>
+							</div>
+						<?php  } ?>
 				</div>
 			</div>
 		</div><!-- wrapper -->
