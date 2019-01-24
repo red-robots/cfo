@@ -2047,7 +2047,9 @@ body.scrolled.home #masthead{background:#143448;box-shadow:0 2px 12px 0 rgba(0,0
 .subpage #primary{padding-top:30px;padding-bottom:45px}
 .subpage #primary.no-banner{padding-top:40px}
 @media screen and (min-width:700px){.subpage #primary.no-banner{padding-top:70px}
-}.clientLogin{display:inline-block;position:absolute;top:30px;right:82px}
+}.subpage #primary.has-bottom-info{padding-bottom:0}
+.subpage #primary.has-bottom-info .site-main{margin-bottom:60px}
+.clientLogin{display:inline-block;position:absolute;top:30px;right:82px}
 @media screen and (min-width:700px){.clientLogin{top:24px;right:30px}
 }.clientLogin a{text-transform:uppercase;color:#d2b851;cursor:pointer;font-size:14px;text-decoration:none;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
 .clientLogin a:hover{color:#98b2bf}
@@ -2058,7 +2060,7 @@ body.scrolled.home #masthead{background:#143448;box-shadow:0 2px 12px 0 rgba(0,0
 }@media screen and (min-width:980px){.subpage-banner .titlediv h1{font-size:60px;margin-bottom:45px}
 }.subpage-banner .titlediv h1 span{display:inline-block;position:relative;border-bottom:2px solid #928143}
 .mid-content-wrap{width:100%;margin:0 auto}
-@media screen and (min-width:700px){.mid-content-wrap{width:70%}
+@media screen and (min-width:700px){.mid-content-wrap{width:72%}
 }@media screen and (min-width:700px){.mid-content-wrap.width50{width:50%}
 }.mid-content-wrap .entry-content ul,.mid-content-wrap .entry-content ol{text-align:left;display:inline-block;margin-left:0;padding-left:0}
 .mid-content-wrap .entry-content ul li,.mid-content-wrap .entry-content ol li{margin-bottom:10px}

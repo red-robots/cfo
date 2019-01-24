@@ -538,6 +538,12 @@
     		padding-top: 70px;
     	}
     }
+    &.has-bottom-info {
+    	padding-bottom: 0;
+    	.site-main {
+    		margin-bottom: 60px;
+    	}
+    }
 }
 .clientLogin {
 	display: inline-block;
@@ -596,7 +602,7 @@
 	width: 100%;
 	margin: 0 auto;
 	@media screen and (min-width: $tabwidth) {
-		width: 70%;
+		width: 72%;
 	}
 	&.width50 {
 		@media screen and (min-width: $tabwidth) {

@@ -61,7 +61,7 @@ $banner = get_field('banner_image'); ?>
 		<?php } ?>
 	</main><!-- #main -->
 
-	<?php get_template_part("template-parts/services-bottom"); ?>
+	<?php get_template_part("template-parts/bottom-info"); ?>
 </div><!-- #primary -->
 
 <?php

@@ -6,7 +6,7 @@
 get_header(); 
 $banner = get_field('banner_image'); ?>
 
-<div id="primary" class="full-content-area clear">
+<div id="primary" class="full-content-area clear has-bottom-info">
 	<main id="main" class="site-main mid-wrapper clear" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<div class="mid-content-wrap clear text-center large-text">
@@ -79,6 +79,7 @@ $banner = get_field('banner_image'); ?>
 		<?php endwhile; ?>
 	</main><!-- #main -->
 
+	<?php get_template_part("template-parts/bottom-info"); ?>
 
 </div><!-- #primary -->
 

@@ -134,6 +134,7 @@ $banner = get_field('banner_image'); ?>
 			<div class="bgImage" style="background-image:url('<?php echo $section_3_image['url']; ?>');"></div>
 		<?php } ?>
 	</div>
+
 </div><!-- #primary -->
 
 <?php
