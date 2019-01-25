@@ -961,6 +961,9 @@ body.modal-open {
 		background: #FFF;
 		padding: 30px;
 	}
+	.textcontent p a {
+		text-decoration: underline;
+	}
 	#closePopup {
 		position: absolute;
 		top: -9px;

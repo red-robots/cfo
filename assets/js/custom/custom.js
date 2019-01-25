@@ -154,13 +154,13 @@ jQuery(document).ready(function ($) {
 
 
 	/* Pop-up Page Content */
-	var popup_pages = ['privacy-policy','terms-of-use','disclaimer'];
+	//var popup_pages = ['privacy-policy','terms-of-use','disclaimer','disclosures'];
 	$('#colophon-menu a').on("click",function(e){
-		e.preventDefault();
 		var page_url = $(this).attr('href');
 		var slug = $(this).attr('data-slug');
 		if(slug) {
-			if($.inArray(slug, popup_pages) !== -1) {
+			e.preventDefault();
+			//if($.inArray(slug, popup_pages) !== -1) {
 				$.ajax({
 					url : frontajax.ajaxurl,
 					type : 'post',
@@ -181,10 +181,8 @@ jQuery(document).ready(function ($) {
 						} 
 					}
 				});
-			}
-		} else {
-			window.location.href = page_url;
-		}
+			//}
+		} 
 	});
 
 

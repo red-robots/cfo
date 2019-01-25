@@ -2126,6 +2126,7 @@ body.modal-open{overflow:hidden}
 .popup_wrapper .inner{text-align:justify;position:relative;overflow-x:hidden;overflow-y:auto;width:100%;height:100%}
 .popup_wrapper .inner p{margin-top:0;margin-bottom:1.5em}
 .popup_wrapper .contentwrap{min-height:400px;background:#FFF;padding:30px}
+.popup_wrapper .textcontent p a{text-decoration:underline}
 .popup_wrapper #closePopup{position:absolute;top:-9px;right:-13px;display:block;width:31px;height:31px;text-align:center;color:#FFF;text-decoration:none;border-radius:100px;z-index:20;background:#272727;cursor:pointer;border:1px solid #FFF}
 .popup_wrapper #closePopup span{position:relative;font-size:18px;top:0;left:1px}
 @media screen and (min-width:700px){.popup_wrapper #closePopup{display:none}

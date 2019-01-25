@@ -19,13 +19,18 @@
 							<div class="menu-colophon-container">
 								<ul id="colophon-menu" class="menu">
 									<?php foreach($menus as $m) { 
+										$type = $m->type;
 										$menu_title = $m->title; 
 										$menu_url = $m->url; 
 										$obj_id = $m->object_id;
 										$basename = ($obj_id) ? basename($menu_url): '';
-										?>
+										$taget_blank = '';
+										if($type=='custom') {
+											$basename = '';
+											$taget_blank = ' target="_blank"';
+										} ?>
 										<?php if($menu_title) { ?>
-										<li><a data-slug="<?php echo $basename?>" href="<?php echo $menu_url?>"><?php echo $menu_title?></a></li>
+										<li><a data-slug="<?php echo $basename?>" href="<?php echo $menu_url?>"<?php echo $taget_blank?>><?php echo $menu_title?></a></li>
 										<?php  } ?>	
 									<?php  } ?>	
 								</ul>
