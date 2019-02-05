@@ -57,6 +57,12 @@ $post_class ='full-content-area clear'; ?>
 					<a class="twitter" data-href="https://twitter.com/share?text=<?php echo urlencode(get_the_title()); ?>&url=<?php echo get_permalink(); ?>" rel="nofollow" onclick="javascript:window.open(this.dataset.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><span class="icon fab fa-twitter-square"></span></a>
 					<a class="facebook" target="_blank" data-href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink(); ?>" onclick="javascript:window.open(this.dataset.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><span class="icon fab fa-facebook"></span></a>
 					<a class="email" href="mailto:?subject=<?php echo get_the_title(); ?>&body=<?php echo get_permalink(); ?>"><span class="icon fas fa-envelope-square"></span></a>
+				
+					<?php 
+					$printable_version = get_field('printable_version');
+					if($printable_version) { ?>
+					<a class="print" target="_blank" title="Printable Version" href="<?php echo $printable_version['url'];?>"><span class="icon fas fa-print"></span></a>
+					<?php } ?>
 				</div>
 
 			<?php endwhile; ?>
