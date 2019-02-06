@@ -2089,6 +2089,7 @@ body.scrolled.home #masthead{background:#143448;box-shadow:0 2px 12px 0 rgba(0,0
 .section4-title h2.title{color:#FFF;margin:0;font-family:"BemboStd","Georgia",serif;font-size:30px;font-weight:normal;text-transform:uppercase;text-align:center;letter-spacing:2px}
 @media screen and (min-width:700px){.section4-title h2.title{font-size:40px}
 }.section4-content{padding-top:50px;padding-bottom:40px}
+.section4-content .footnote{font-size:13px;margin-top:55px;margin-bottom:20px;text-align:center}
 .button .btn.xs{padding:5px 10px 3px;font-size:13px;letter-spacing:1px}
 .bottom-info{background-color:#1a273a;background-size:cover;background-position:center center;background-repeat:no-repeat;background-color:#3b505a;color:#FFF;text-align:center;margin-bottom:0}
 .bottom-info .title1{margin:0;font-family:"BemboStd","Georgia",serif;font-size:35px;font-weight:normal;letter-spacing:1px;line-height:1.2;text-transform:uppercase}

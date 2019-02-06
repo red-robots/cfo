@@ -6,7 +6,7 @@
 get_header(); 
 $banner = get_field('banner_image'); ?>
 
-<div id="primary" class="full-content-area clear">
+<div id="primary" class="full-content-area clear nopadbottom">
 	<main id="main" class="site-main mid-wrapper clear" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<div class="mid-content-wrap clear text-center large-text">
@@ -94,6 +94,7 @@ $banner = get_field('banner_image'); ?>
 	$content4 = get_field('section_4_text');
 	$button_label4 = get_field('section_4_link_text');
 	$button_link4 = get_field('section_4_link');
+	$footnote = get_field('footnote');
 	?>
 	<?php if($title4) { ?>
 	<div class="section4-title clear">
@@ -106,6 +107,10 @@ $banner = get_field('banner_image'); ?>
 			<div class="button text-center">
 				<a class="btn xs" href="<?php echo $button_link4?>"><?php echo $button_label4?></a>
 			</div>
+			<?php } ?>
+
+			<?php if($footnote) { ?>
+			<div class="footnote"><?php echo $footnote; ?></div>
 			<?php } ?>
 		</div>
 	</div>
