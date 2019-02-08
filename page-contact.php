@@ -31,6 +31,7 @@ $banner = get_field('banner_image'); ?>
 			$phone_number = get_field('phone');
 			$email_title = get_field('email_title');
 			$email = get_field('email');
+			$antispam = antispambot($email);
 		?>
 		<div class="contact-info text-center">
 
@@ -47,7 +48,7 @@ $banner = get_field('banner_image'); ?>
 
 				<?php if($email_title && $email) { ?>
 				<div class="row-info clear">
-					<div class="info value fullwidth"><span><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></span></div>
+					<div class="info value fullwidth"><span><a href="mailto:<?php echo $antispam; ?>"><?php echo $antispam; ?></a></span></div>
 				</div>
 				<?php } ?>
 			</div>
