@@ -24,6 +24,9 @@ function my_login_logo() {
         margin-bottom: 20px;
       <?php } ?> 
     }
+    body.login {
+      background-color: #092f3c;
+    }
     body.login div#login h1 a {
       <?php if($logo_url) { ?>
         background-image: url(<?php echo $logo_url; ?>);
