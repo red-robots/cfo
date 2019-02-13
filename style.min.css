@@ -2301,6 +2301,7 @@ body.modal-open{overflow:hidden}
 }.bottomtext{margin-bottom:30px;position:relative;top:-10px}
 .bottomtext p{margin-top:0;margin-bottom:1.5em}
 .single-post .entry-title{margin:0;font-family:"BemboStd","Georgia",serif;font-weight:normal;font-size:35px;line-height:1.2;text-transform:uppercase;border-bottom:2px solid #928143}
+.single-post .entry-header .date{color:#928143;margin-top:6px;font-size:13px}
 .single-post .sidebar.right{margin-top:0}
 .post-sidebar{text-align:right}
 .post-sidebar .titlediv{background:#928143;color:#FFF;padding:5px 20px;font-weight:400;font-size:16px;line-height:1.3}

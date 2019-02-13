@@ -1877,6 +1877,12 @@ body.modal-open {
 	line-height: 1.2;
 	text-transform: uppercase;
 	border-bottom: 2px solid $color-gold;
+
+}
+.single-post .entry-header .date {
+	color: $color-gold;
+	margin-top: 6px;
+    font-size: 13px;
 }
 .single-post .sidebar.right {
 	margin-top: 0;
