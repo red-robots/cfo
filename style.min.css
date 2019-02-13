@@ -2203,7 +2203,8 @@ body.modal-open{overflow:hidden}
 .contact-bottom .text{position:relative;z-index:5}
 .contact-bottom .bgImage{position:absolute;top:0;left:0;width:100%;height:100%;background-size:cover;background-position:center;background-repeat:no-repeat}
 .subpage #primary.contact-content{padding-bottom:0}
-.category-list{margin-top:-8px;padding-bottom:50px}
+.page-template-page-news .mid-wrapper{padding-bottom:40px}
+.category-list{margin-top:-8px}
 .category-list .the-posts{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;margin-left:-15px;margin-right:-15px;padding-top:70px;padding-bottom:15px}
 .category-list .post-entry{display:inline-block;width:100%;margin-bottom:30px}
 @media screen and (min-width:700px){.category-list .post-entry{width:49.5%;margin-bottom:30px}
@@ -2268,7 +2269,7 @@ body.modal-open{overflow:hidden}
 .values-section .values li{font-size:20px;margin-top:4px}
 @media screen and (min-width:700px){.values-section .values li{font-size:24px}
 }.values-section .values li:first-child{margin-top:0}
-#pagination a,#pagination span{display:inline-block;width:30px;height:30px;line-height:29px;font-size:14px;border:1px solid transparent;text-align:center;text-decoration:none;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
+#pagination a,#pagination span{display:inline-block;width:30px;height:30px;line-height:29px;font-size:14px;border:1px solid transparent;text-align:center;text-decoration:none;margin-right:1px;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
 #pagination span{border:1px solid #3b505a;background:#FFF;color:#3b505a}
 #pagination a{background:#3b505a;color:#FFF}
 #pagination a:hover{background:#98b2bf}

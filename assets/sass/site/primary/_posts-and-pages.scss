@@ -1357,9 +1357,11 @@ body.modal-open {
 .subpage #primary.contact-content {
 	padding-bottom: 0;
 }
+.page-template-page-news .mid-wrapper {
+	padding-bottom: 40px;
+}
 .category-list {
 	margin-top: -8px;
-	padding-bottom: 50px;
 	.the-posts {
 		@include flexbox();
 		@include flexbox-align-content(center);
@@ -1701,6 +1703,7 @@ body.modal-open {
 		border:1px solid transparent;
 		text-align: center;
 		text-decoration: none;
+		margin-right: 1px;
 		@include transition(all ease-out .3s);
 	}
 	span {
