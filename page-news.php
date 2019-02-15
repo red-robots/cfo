@@ -44,7 +44,7 @@ $banner = get_field('banner_image'); ?>
 			<div class="category-list clear">
 				<div class="the-posts clear">
 					<?php while ( $blogs->have_posts() ) : $blogs->the_post(); 
-						$post_id = $p->post_id;
+						$post_id = get_the_ID();
 						$thumbnail_id = get_post_thumbnail_id($post_id);
 						$feat_image = wp_get_attachment_image_src($thumbnail_id,'large');
 						$post_title = get_the_title();
