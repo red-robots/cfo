@@ -1053,6 +1053,7 @@ body.modal-open {
 	.contact-details {
 		width: 100%;
 		float: left;
+		margin-bottom: 10px;
 		span {
 			display: inline-block;
 			line-height: 1.3;
@@ -1082,6 +1083,17 @@ body.modal-open {
 	.fa-phone.fa-w-16 {
 		-webkit-transform: scaleX(-1);
   		transform: scaleX(-1);
+	}
+}
+.sharebio {
+	display: inline-block;
+	background: $color-theme;
+	color: #FFF!important;
+	text-decoration: none;
+	padding: 2px 8px;
+	.icon {
+		display: inline-block;
+		margin-right: 5px;
 	}
 }
 

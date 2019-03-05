@@ -2141,7 +2141,7 @@ body.modal-open{overflow:hidden}
 .staff_information .imageContainer.small-screen{display:none}
 .staff_information .imageContainer.large-screen{display:block}
 }.staff_information .featured-image{border:1px solid #e1e1e1;width:100%;height:auto;float:left;margin-bottom:18px}
-.staff_information .contact-details{width:100%;float:left}
+.staff_information .contact-details{width:100%;float:left;margin-bottom:10px}
 .staff_information .contact-details span{display:inline-block;line-height:1.3;position:relative}
 .staff_information .contact-details .label{position:absolute;top:0;left:0}
 .staff_information .contact-details div{position:relative;margin-bottom:5px;padding-left:26px}
@@ -2149,6 +2149,8 @@ body.modal-open{overflow:hidden}
 .staff_information .contact-details div.email .label{top:3px}
 .staff_information .contact-details a{color:#3b505a;text-decoration:none}
 .staff_information .fa-phone.fa-w-16{-webkit-transform:scaleX(-1);-ms-transform:scaleX(-1);transform:scaleX(-1)}
+.sharebio{display:inline-block;background:#3b505a;color:#FFF !important;text-decoration:none;padding:2px 8px}
+.sharebio .icon{display:inline-block;margin-right:5px}
 .page-template-page-login .login-title{margin:10px 0 0;font-weight:400;font-size:28px;text-align:center;position:relative}
 @media screen and (min-width:980px){.page-template-page-login .login-title{margin:30px 0 0;font-size:35px}
 }.page-template-page-login .login-title .icon{position:relative;top:-2px;left:-16px;font-size:26px}

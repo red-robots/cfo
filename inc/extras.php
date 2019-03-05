@@ -61,6 +61,7 @@ function get_staff_info_html($obj) {
 	$phone_number = get_field('phone_number',$post_id);
 	$email_address = get_field('email_address',$post_id);
 	$address = get_field('address',$post_id);
+	$staff_pagelink = get_permalink($post_id);
 	$has_info = ($photo || $phone_number || $email_address || $address) ? true : false;
 	ob_start(); ?>
 	<div id="staffDetails" class="popup_wrapper staff_information">
@@ -87,7 +88,7 @@ function get_staff_info_html($obj) {
 									<?php } ?>
 
 									<?php if($email_address) { ?>
-										<div class="email"><span class="label"><i class="fa fa-envelope"></i></span><span class="value"><a href="mailto:<?php echo $email_address;?>"><?php echo $email_address;?></a></span></div>
+										<div class="email"><span class="label"><i class="fa fa-envelope"></i></span><span class="value"><a href="mailto:<?php echo antispambot($email_address,1);?>"><?php echo $email_address;?></a></span></div>
 									<?php } ?>
 
 									<?php if($address) { ?>
@@ -99,27 +100,35 @@ function get_staff_info_html($obj) {
 
 						<?php echo $content;?>
 					</div>
+					
 					<?php if($has_info) { ?>
 						<div class="imageContainer large-screen">
 							<?php if($photo) { ?>
 							<img class="featured-image" src="<?php echo $photo['url']?>" alt="<?php echo $photo['title']?>" />
 							<?php } ?>
 
+							<?php if($phone_number || $email_address || $address) { ?>
 							<div class="contact-details clear">
 								<?php if($phone_number) { ?>
-									<div class="phone"><span class="label"><i class="fa fa-phone"></i></span><span class="value"><a href="tel:<?php echo format_phone_number($phone_number);?>"><?php echo $phone_number;?></a></span></div>
+									<div class="phone c-info"><span class="label"><i class="fa fa-phone"></i></span><span class="value"><a href="tel:<?php echo format_phone_number($phone_number);?>"><?php echo $phone_number;?></a></span></div>
 								<?php } ?>
 
 								<?php if($email_address) { ?>
-									<div class="email"><span class="label"><i class="fa fa-envelope"></i></span><span class="value"><a href="mailto:<?php echo $email_address;?>"><?php echo $email_address;?></a></span></div>
+									<div class="email c-info"><span class="label"><i class="fa fa-envelope"></i></span><span class="value"><a href="mailto:<?php echo antispambot($email_address,1);?>"><?php echo $email_address;?></a></span></div>
 								<?php } ?>
 
 								<?php if($address) { ?>
-									<div class="address"><span class="label"><i class="fa fa-map-marker-alt"></i></span><span class="value"><?php echo $address;?></span></div>
+									<div class="address c-info"><span class="label"><i class="fa fa-map-marker-alt"></i></span><span class="value"><?php echo $address;?></span></div>
 								<?php } ?>
+							</div>
+							<?php } ?>
+
+							<div class="share-info">
+								<a class="sharebio" href="mailto:?subject=<?php echo $post_title; ?>&body=<?php echo $staff_pagelink; ?>"><span class="icon"><i class="far fa-envelope"></i></span> Share Bio</a>
 							</div>
 						</div>
 					<?php } ?>
+
 				</div>
 			</div>
 		</div>
