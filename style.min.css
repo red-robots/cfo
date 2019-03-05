@@ -2105,19 +2105,21 @@ body.scrolled.home #masthead{background:#143448;box-shadow:0 2px 12px 0 rgba(0,0
 }.team-list .team{width:95%;padding-left:30px;padding-right:30px;cursor:pointer;margin:0 auto 25px}
 @media screen and (min-width:700px){.team-list .team{width:49.5%;padding-left:12px;padding-right:12px}
 }@media screen and (min-width:980px){.team-list .team{width:33.29%}
-}.team-list .inside{box-shadow:0 0 21px 0 rgba(0,0,0,0.28)}
+}.team-list .team a{text-decoration:none;outline:0;cursor:pointer}
+.team-list .inside{box-shadow:0 0 21px 0 rgba(0,0,0,0.28)}
 .team-list .photo{position:relative;background:#e1e1e1;width:100%;float:left}
+.team-list .photo a{display:block;width:100%;float:left}
 .team-list .photo img{width:100%;height:auto;float:left}
-.team-list .info{background:#3b505a;height:auto;color:#FFF;padding:15px 10px;text-align:center;width:100%;float:left;position:relative;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
+.team-list .info{display:block;background:#3b505a;height:auto;color:#FFF;padding:15px 10px;text-align:center;width:100%;float:left;position:relative;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
 @media screen and (min-width:700px){.team-list .info{height:98px;padding:13px 10px}
 }@media screen and (min-width:980px){.team-list .info{height:113px}
 }.team-list .info h3{margin:0;padding:0;font-family:"BemboStd","Georgia",serif;font-size:18px;font-weight:normal;line-height:1.2}
-.team-list .jobtitle{position:relative;top:-2px;font-size:13px;font-weight:300}
-.team-list .buttondiv{width:100%;margin-top:4px}
+.team-list .jobtitle{display:block;position:relative;top:-2px;font-size:13px;font-weight:300}
+.team-list .buttondiv{display:block;width:100%;margin-top:4px}
 @media screen and (min-width:700px){.team-list .buttondiv{position:absolute;bottom:12px;left:0}
-}.team-list .buttondiv a{display:inline-block;border:1px solid #98b2bf;color:#98b2bf;padding:1px 25px;font-size:16px;font-weight:500;text-decoration:none;line-height:1}
+}.team-list .buttondiv .pagelink{display:inline-block;border:1px solid #98b2bf;color:#98b2bf;padding:1px 25px;font-size:16px;font-weight:500;text-decoration:none;line-height:1}
 .team-list .team:hover .info{background:#98b2bf}
-.team-list .team:hover .buttondiv a{border-color:#FFF;color:#FFF}
+.team-list .team:hover .pagelink{border-color:#FFF;color:#FFF}
 body.modal-open{overflow:hidden}
 .popup_wrapper{width:100%;height:100%;position:fixed;top:0;left:0;z-index:20000;padding:20px}
 @media screen and (min-width:700px){.popup_wrapper{padding:4% 20px 4%}

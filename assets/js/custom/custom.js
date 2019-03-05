@@ -18,19 +18,6 @@ jQuery(document).ready(function ($) {
     }); 
 
 	/*
-        FAQ dropdowns
-	__________________________________________
-	*/
-	$('.question').click(function() {
-	 
-	    $(this).next('.answer').slideToggle(500);
-	    $(this).toggleClass('close');
-	    $(this).find('.plus-minus-toggle').toggleClass('collapsed');
-	    $(this).parent().toggleClass('active');
-	 
-	});
-
-	/*
 	*
 	*	Responsive iFrames
 	*
@@ -78,27 +65,6 @@ jQuery(document).ready(function ($) {
  		 });
 	});
 
-	/*
-	*
-	*	Smooth Scroll to Anchor
-	*
-	------------------------------------*/
-	//  $('a').click(function(){
-	//     $('html, body').animate({
-	//         scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
-	//     }, 500);
-	//     return false;
-	// });
-
-	/*
-	*
-	*	Nice Page Scroll
-	*
-	------------------------------------*/
-	// $(function(){	
-	// 	$("html").niceScroll();
-	// });
-	
 	
 	/*
 	*
@@ -128,29 +94,30 @@ jQuery(document).ready(function ($) {
 		$(this).next().removeClass('show fadeInUp');
 	});
 
-	$('.team-list .team').on("click",function(){
-		var post_id = $(this).attr('data-id');
-		$.ajax({
-			url : frontajax.ajaxurl,
-			type : 'post',
-			dataType : "json",
-			data : {
-				action : 'the_staff_info',
-				post_id : post_id
-			},
-			beforeSend:function(){
-				$(".ml-loader-wrap").show();
-			},
-			success : function( response ) {
-				if(response.content) {
-					var content = response.content;
-					$('body').append(content);
-					$('body').addClass('modal-open');
-					$(".ml-loader-wrap").hide();
-				} 
-			}
-		});
-	});
+	/* POP-UP STAFF DETAILS */
+	// $('.team-list .team').on("click",function(){
+	// 	var post_id = $(this).attr('data-id');
+	// 	$.ajax({
+	// 		url : frontajax.ajaxurl,
+	// 		type : 'post',
+	// 		dataType : "json",
+	// 		data : {
+	// 			action : 'the_staff_info',
+	// 			post_id : post_id
+	// 		},
+	// 		beforeSend:function(){
+	// 			$(".ml-loader-wrap").show();
+	// 		},
+	// 		success : function( response ) {
+	// 			if(response.content) {
+	// 				var content = response.content;
+	// 				$('body').append(content);
+	// 				$('body').addClass('modal-open');
+	// 				$(".ml-loader-wrap").hide();
+	// 			} 
+	// 		}
+	// 	});
+	// });
 
 
 	/* Pop-up Page Content */
