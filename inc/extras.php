@@ -123,7 +123,7 @@ function get_staff_info_html($obj) {
 							</div>
 							<?php } ?>
 
-							<div class="share-info">
+							<div class="share-info" style="display:none;">
 								<a class="sharebio" href="mailto:?subject=<?php echo $post_title; ?>&body=<?php echo $staff_pagelink; ?>"><span class="icon"><i class="far fa-envelope"></i></span> Share Bio</a>
 							</div>
 						</div>

@@ -43,18 +43,16 @@ $banner = get_field('banner_image'); ?>
 						$team_title = get_field('team_title'); 
 						$team_link = get_permalink();
 						?>
-						<div id="team_<?php the_ID();?>" data-id="<?php the_ID();?>" class="team <?php echo ($photo) ? 'has-photo':'no-photo';?>">
+						<div id="team_<?php the_ID();?>" data-url="<?php echo $team_link; ?>" data-id="<?php the_ID();?>" class="team <?php echo ($photo) ? 'has-photo':'no-photo';?>">
 							<div class="inside clear">
 								<div class="photo">
-									<a href="<?php echo $team_link ?>">
-										<?php if($photo) { ?>
-											<img src="<?php echo $photo['url'];?>" alt="<?php echo $photo['title'];?>" />
-										<?php } else { ?>
-											<img src="<?php echo get_bloginfo('template_url')?>/images/nophoto.jpg" alt="" />
-										<?php } ?>
-									</a>
+									<?php if($photo) { ?>
+										<img src="<?php echo $photo['url'];?>" alt="<?php echo $photo['title'];?>" />
+									<?php } else { ?>
+										<img src="<?php echo get_bloginfo('template_url')?>/images/nophoto.jpg" alt="" />
+									<?php } ?>
 								</div>
-								<a class="info" href="<?php echo $team_link ?>">
+								<div class="info">
 									<h3><?php echo $team_name; ?></h3>
 									<?php if($team_title) { ?>
 									<span class="jobtitle"><?php echo $team_title; ?></span>
@@ -62,7 +60,7 @@ $banner = get_field('banner_image'); ?>
 									<span class="buttondiv">
 										<span class="pagelink">Bio</span>
 									</span>
-								</a>
+								</div>
 							</div>
 						</div>
 					<?php endwhile; wp_reset_postdata(); ?>

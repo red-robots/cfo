@@ -95,29 +95,29 @@ jQuery(document).ready(function ($) {
 	});
 
 	/* POP-UP STAFF DETAILS */
-	// $('.team-list .team').on("click",function(){
-	// 	var post_id = $(this).attr('data-id');
-	// 	$.ajax({
-	// 		url : frontajax.ajaxurl,
-	// 		type : 'post',
-	// 		dataType : "json",
-	// 		data : {
-	// 			action : 'the_staff_info',
-	// 			post_id : post_id
-	// 		},
-	// 		beforeSend:function(){
-	// 			$(".ml-loader-wrap").show();
-	// 		},
-	// 		success : function( response ) {
-	// 			if(response.content) {
-	// 				var content = response.content;
-	// 				$('body').append(content);
-	// 				$('body').addClass('modal-open');
-	// 				$(".ml-loader-wrap").hide();
-	// 			} 
-	// 		}
-	// 	});
-	// });
+	$('.team-list .team').on("click",function(){
+		var post_id = $(this).attr('data-id');
+		$.ajax({
+			url : frontajax.ajaxurl,
+			type : 'post',
+			dataType : "json",
+			data : {
+				action : 'the_staff_info',
+				post_id : post_id
+			},
+			beforeSend:function(){
+				$(".ml-loader-wrap").show();
+			},
+			success : function( response ) {
+				if(response.content) {
+					var content = response.content;
+					$('body').append(content);
+					$('body').addClass('modal-open');
+					$(".ml-loader-wrap").hide();
+				} 
+			}
+		});
+	});
 
 
 	/* Pop-up Page Content */
