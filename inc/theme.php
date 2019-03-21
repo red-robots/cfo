@@ -314,3 +314,8 @@ class WP_Image_Size_Limit {
 }
 $WP_Image_Size_Limit = new WP_Image_Size_Limit;
 add_action('admin_head', array($WP_Image_Size_Limit, 'load_styles'));
+
+function favicon4admin() {
+echo '<link rel="Shortcut Icon" type="image/x-icon" href="https://colonyfamilyoffices.com/bw/wp-content/uploads/2018/11/favicon.png?v=2" />';
+}
+add_action( 'admin_head', 'favicon4admin' );
