@@ -30,6 +30,8 @@ $banner = get_field('banner_image'); ?>
 				$login_link1 = get_field('link_one_url'); 
 				$login_title2 = get_field('link_2_title'); 
 				$login_link2 = get_field('link_2_url'); 
+				$login_title3 = get_field('link_3_Title'); 
+				$login_link3 = get_field('link_3_url'); 
 			?>
 
 			<?php if($login_main_title) { ?>
@@ -53,6 +55,16 @@ $banner = get_field('banner_image'); ?>
 						<div class="inside clear">
 							<a href="<?php echo $login_link2;?>" target="_blank">
 								<?php echo $login_title2;?>
+								<span class="icon"><i class="fa fa-chevron-right"></i></span>
+							</a>
+						</div>
+					</div>
+				<?php } ?>
+				<?php if($login_title3 && $login_link3) { ?>
+					<div class="login-btn login2">
+						<div class="inside clear">
+							<a href="<?php echo $login_link3;?>" target="_blank">
+								<?php echo $login_title3;?>
 								<span class="icon"><i class="fa fa-chevron-right"></i></span>
 							</a>
 						</div>
