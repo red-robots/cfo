@@ -60,7 +60,7 @@ $banner = get_field('banner_image'); ?>
 						</div>
 					</div>
 				<?php } ?>
-				<?php if($login_title3 && $login_link3) { ?>
+				<?php if($login_title3 && $login_link3) { //?>
 					<div class="login-btn login2">
 						<div class="inside clear">
 							<a href="<?php echo $login_link3;?>" target="_blank">
